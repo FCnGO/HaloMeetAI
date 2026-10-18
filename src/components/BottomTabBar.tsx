@@ -5,6 +5,7 @@ interface BottomTabBarProps {
   setActiveTab: (tab: string) => void;
   pendingInboxCount: number;
   pendingChatsCount?: number;
+  matchesCount?: number;
 }
 
 const iconProps = {
@@ -54,11 +55,12 @@ export const BottomTabBar: React.FC<BottomTabBarProps> = ({
   activeTab,
   setActiveTab,
   pendingInboxCount,
-  pendingChatsCount = 0
+  pendingChatsCount = 0,
+  matchesCount = 0
 }) => {
   const tabs = [
     { id: 'discovery', label: 'Radar', icon: RadarNavIcon },
-    { id: 'matchmaking', label: 'Matches', icon: MatchesNavIcon },
+    { id: 'matchmaking', label: 'Matches', icon: MatchesNavIcon, badge: matchesCount },
     { id: 'chat', label: 'Chats', icon: ChatsNavIcon, badge: pendingChatsCount },
     { id: 'inbox', label: 'History', icon: HistoryNavIcon, badge: pendingInboxCount },
     { id: 'profile', label: 'Me', icon: MeNavIcon }

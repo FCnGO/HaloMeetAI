@@ -797,7 +797,7 @@ export const SEED_PROFILES: UserProfile[] = [
 
 export const INITIAL_CONVERSATIONS: ConversationRecord[] = [
   {
-    id: 'conv-priya-tom-match',
+    id: 'conv-priya-shah-tom-reyes-match',
     participantAId: 'priya-shah',
     participantBId: 'tom-reyes',
     kind: 'agent_match',
@@ -842,7 +842,7 @@ export const INITIAL_CONVERSATIONS: ConversationRecord[] = [
     ]
   },
   {
-    id: 'conv-marcus-priya-match',
+    id: 'conv-marcus-vance-priya-shah-match',
     participantAId: 'marcus-vance',
     participantBId: 'priya-shah',
     kind: 'agent_match',
@@ -890,7 +890,7 @@ export const INITIAL_OPPORTUNITIES: OpportunityRecord[] = [
     receiverApproved: false,
     status: 'pending',
     initialNote: 'Exploration of ANiX offline onboard conversational AI concierge for SkyHorizon Airlines 40 x A350 long-haul fleet trial.',
-    conversationId: 'conv-priya-tom-match',
+    conversationId: 'conv-priya-shah-tom-reyes-match',
     createdAt: '2026-10-13T18:31:00.000Z',
     updatedAt: '2026-10-13T18:31:00.000Z'
   }

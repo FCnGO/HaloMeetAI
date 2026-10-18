@@ -506,6 +506,7 @@ export default function App() {
           setActiveTab={handleTabSelect}
           pendingInboxCount={pendingOpportunitiesCount}
           pendingChatsCount={pendingOpportunitiesCount}
+          matchesCount={matchmakingResult?.matches?.length || 0}
         />
 
       </div>
