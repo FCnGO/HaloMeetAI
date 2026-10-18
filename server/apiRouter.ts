@@ -383,8 +383,10 @@ apiRouter.post('/matchmaking/analyze', async (req: Request, res: Response) => {
       allProfiles
     });
 
-    // Store the conversation record to guarantee deterministic demo stability!
-    db.saveConversation(result.topMatchConversation);
+    // Store the conversation records (top 3 matches) to guarantee deterministic demo stability!
+    for (const conv of result.matchConversations && result.matchConversations.length > 0 ? result.matchConversations : [result.topMatchConversation]) {
+      db.saveConversation(conv);
+    }
 
     db.logAiActivity({
       feature: 'Matchmaking Transcript',

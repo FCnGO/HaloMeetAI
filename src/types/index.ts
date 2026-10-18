@@ -131,6 +131,7 @@ export interface MatchmakingSynergy {
 export interface MatchmakingResult {
   matches: MatchmakingSynergy[];
   topMatchConversation: ConversationRecord;
+  matchConversations?: ConversationRecord[];
   latencyMs?: number;
   modelUsed?: string;
   attempts?: number;

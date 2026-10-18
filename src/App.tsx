@@ -223,6 +223,8 @@ export default function App() {
       const res = await api.runMatchmaking(currentPersona.id, force);
       setMatchmakingResult(res);
       setMatchmakingCached(res.cached);
+      // Pull the freshly-saved avatar-to-avatar transcripts into appState so they show up in Chats immediately.
+      refreshState();
       if (announce) {
         const count = res.matches?.length || 0;
         showNotification(`Your avatar finished networking the room — ${count} ${count === 1 ? 'match' : 'matches'} ranked. Check Matches →`, 'success');
@@ -241,6 +243,17 @@ export default function App() {
   const handleRunAgentNetwork = async (announce = false) => {
     await handleRunMatchmaking(false, announce);
   };
+
+  // Catch-all: if the current persona is already visible (e.g. inherited from a prior
+  // session, or visible on a fresh page load) and no ranked matches exist yet, start
+  // networking automatically instead of waiting on an explicit OFF->ON toggle.
+  useEffect(() => {
+    if (showSplash || showLoginGate || showOnboarding) return;
+    if (!currentPersona.permissions.showPresence) return;
+    if (matchmakingResult || matchmakingLoading) return;
+    handleRunMatchmaking(false, true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentPersona.id, currentPersona.permissions.showPresence, showSplash, showLoginGate, showOnboarding]);
 
   const handleRequestIntroduction = async (targetProfileId: string, initialNote: string, conversationId?: string) => {
     try {

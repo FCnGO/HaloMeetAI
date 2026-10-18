@@ -701,9 +701,9 @@ For EVERY candidate listed above (return one entry per candidate id, no omission
 Sort the "matches" array by synergyScore descending.
 
 CRITICAL TRANSCRIPT GROUNDING REQUIREMENTS:
-For the #1 top candidate match, generate a realistic 3 to 5 turn simulated conversation transcript between the two autonomous agents (Agent A representing ${persona.name}, Agent B representing the top candidate).
-1. The transcript MUST explicitly reference and discuss specific product names, technical capabilities, specs, and problem statements from the respective profiles' product cards (e.g. specific product titles, offline-first architectures, DO-160 hardware, satellite bandwidth constraints, turnaround operational sync, or ticket sizes).
-2. The agents must debate and confirm whether the product directly solves the counterparty's explicit operational or technical constraint before agreeing to initiate an introduction.
+For EACH of the top 3 highest-synergy candidates (after sorting), generate a realistic 3 to 5 turn simulated conversation transcript between the two autonomous agents (Agent A representing ${persona.name}, Agent B representing that candidate). Return exactly 3 entries in "transcripts", one per top-3 candidate, each tagged with that candidate's id.
+1. Each transcript MUST explicitly reference and discuss specific product names, technical capabilities, specs, and problem statements from the respective profiles' product cards (e.g. specific product titles, offline-first architectures, DO-160 hardware, satellite bandwidth constraints, turnaround operational sync, or ticket sizes).
+2. The agents must debate and confirm whether the product directly solves the counterparty's explicit operational or technical constraint before agreeing to initiate an introduction (or candidly conclude it's a weaker fit, for the #2/#3 candidates where that's true).
 3. No generic filler networking — every line must be deeply grounded in each attendee's declared agentSpec.
 
 Return structured JSON.`;
@@ -727,20 +727,30 @@ Return structured JSON.`;
             required: ['id', 'synergyScore', 'synergyReason', 'potentialBenefit', 'tags']
           }
         },
-        transcript: {
+        transcripts: {
           type: Type.ARRAY,
           items: {
             type: Type.OBJECT,
             properties: {
-              role: { type: Type.STRING, enum: ['agent_a', 'agent_b'] },
-              senderName: { type: Type.STRING },
-              text: { type: Type.STRING }
+              candidateId: { type: Type.STRING },
+              messages: {
+                type: Type.ARRAY,
+                items: {
+                  type: Type.OBJECT,
+                  properties: {
+                    role: { type: Type.STRING, enum: ['agent_a', 'agent_b'] },
+                    senderName: { type: Type.STRING },
+                    text: { type: Type.STRING }
+                  },
+                  required: ['role', 'senderName', 'text']
+                }
+              }
             },
-            required: ['role', 'senderName', 'text']
+            required: ['candidateId', 'messages']
           }
         }
       },
-      required: ['matches', 'transcript']
+      required: ['matches', 'transcripts']
     }
   };
 
@@ -809,30 +819,44 @@ Return structured JSON.`;
 
     matches.sort((a, b) => b.synergyScore - a.synergyScore);
 
-    const topProfile = matches[0]?.profile || otherProfiles[0];
-    const topMatchConversation: ConversationRecord = {
-      id: `conv-${persona.id}-${topProfile.id}-match`,
-      participantAId: persona.id,
-      participantBId: topProfile.id,
-      kind: 'agent_match',
-      generatedAt: new Date().toISOString(),
-      summary: `Autonomous agent discovery between ${persona.name} and ${topProfile.name}`,
-      latencyMs,
-      modelUsed,
-      messages: (parsed.transcript || []).map((t: any, idx: number) => ({
-        id: `msg-trans-${idx}`,
-        role: t.role,
-        senderName: t.senderName || (t.role === 'agent_a' ? `${persona.name}'s Agent` : `${topProfile.name}'s Agent`),
-        text: t.text,
-        timestamp: new Date(Date.now() + idx * 12000).toTimeString().substring(0, 8),
+    const transcriptsByCandidateId = new Map<string, any[]>();
+    for (const t of parsed.transcripts || []) {
+      if (t?.candidateId && Array.isArray(t.messages)) {
+        transcriptsByCandidateId.set(t.candidateId, t.messages);
+      }
+    }
+
+    const topThree = matches.slice(0, 3);
+    const matchConversations: ConversationRecord[] = topThree.map((m, rank) => {
+      const rawMessages = transcriptsByCandidateId.get(m.profile.id) || [
+        { role: 'agent_a', senderName: `${persona.name}'s Agent`, text: `I noticed ${m.profile.name}'s focus at ${m.profile.company}. ${m.synergyReason}` },
+        { role: 'agent_b', senderName: `${m.profile.name}'s Agent`, text: m.potentialBenefit }
+      ];
+      return {
+        id: `conv-${persona.id}-${m.profile.id}-match`,
+        participantAId: persona.id,
+        participantBId: m.profile.id,
+        kind: 'agent_match',
+        generatedAt: new Date(Date.now() + rank).toISOString(),
+        summary: `Autonomous agent discovery between ${persona.name} and ${m.profile.name}`,
         latencyMs,
-        modelUsed
-      }))
-    };
+        modelUsed,
+        messages: rawMessages.map((t: any, idx: number) => ({
+          id: `msg-trans-${rank}-${idx}`,
+          role: t.role,
+          senderName: t.senderName || (t.role === 'agent_a' ? `${persona.name}'s Agent` : `${m.profile.name}'s Agent`),
+          text: t.text,
+          timestamp: new Date(Date.now() + idx * 12000).toTimeString().substring(0, 8),
+          latencyMs,
+          modelUsed
+        }))
+      };
+    });
 
     return {
       matches,
-      topMatchConversation,
+      topMatchConversation: matchConversations[0],
+      matchConversations,
       latencyMs,
       modelUsed,
       attempts: telemetry.attempts,
@@ -860,7 +884,7 @@ Return structured JSON.`;
     tags: idx === 0 ? ['Pilot-ready', 'Decision maker', 'Shared KPI'] : ['Strategic fit', 'Active need']
   }));
 
-  const fallbackConversation: ConversationRecord = {
+  const fallbackTopConversation: ConversationRecord = {
     id: `conv-${persona.id}-${topProfile.id}-match`,
     participantAId: persona.id,
     participantBId: topProfile.id,
@@ -918,9 +942,44 @@ Return structured JSON.`;
     ]
   };
 
+  const fallbackConversations: ConversationRecord[] = [
+    fallbackTopConversation,
+    ...fallbackMatches.slice(1, 3).map((m, idx) => ({
+      id: `conv-${persona.id}-${m.profile.id}-match`,
+      participantAId: persona.id,
+      participantBId: m.profile.id,
+      kind: 'agent_match' as const,
+      generatedAt: new Date(Date.now() + idx + 1).toISOString(),
+      summary: `Autonomous agent discovery between ${persona.name} and ${m.profile.name}`,
+      latencyMs: fallbackLatencyMs,
+      modelUsed: 'Deterministic Domain Engine',
+      messages: [
+        {
+          id: `fb-${idx}-1`,
+          role: 'agent_a' as const,
+          senderName: `${persona.name}'s Agent`,
+          text: `I noticed ${m.profile.name}'s focus at ${m.profile.company}. ${m.synergyReason}`,
+          timestamp: '18:41:02',
+          latencyMs: fallbackLatencyMs,
+          modelUsed: 'Deterministic Domain Engine'
+        },
+        {
+          id: `fb-${idx}-2`,
+          role: 'agent_b' as const,
+          senderName: `${m.profile.name}'s Agent`,
+          text: m.potentialBenefit,
+          timestamp: '18:41:15',
+          latencyMs: fallbackLatencyMs,
+          modelUsed: 'Deterministic Domain Engine'
+        }
+      ]
+    }))
+  ];
+
   return {
     matches: fallbackMatches,
-    topMatchConversation: fallbackConversation,
+    topMatchConversation: fallbackTopConversation,
+    matchConversations: fallbackConversations,
     latencyMs: fallbackLatencyMs,
     modelUsed: 'Deterministic Domain Engine',
     attempts: telemetry.attempts,

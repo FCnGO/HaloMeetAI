@@ -1,13 +1,70 @@
 import React, { useState, useRef } from 'react';
 import { UserProfile } from '../types';
 import { api } from '../services/api';
-import { ChevronLeft, Camera, Sparkles, CheckCircle2, Plus, X, AlertCircle } from 'lucide-react';
+import { ChevronLeft, Camera, Sparkles, CheckCircle2, Plus, X, AlertCircle, Pencil } from 'lucide-react';
 
 interface OnboardingWizardProps {
   currentPersona: UserProfile;
   onProfileUpdated: (updated: UserProfile) => void;
   onComplete: () => void;
 }
+
+const EditableTagGroup: React.FC<{
+  label: string;
+  tags: string[];
+  onChange: (tags: string[]) => void;
+  tone?: 'default' | 'danger';
+}> = ({ label, tags, onChange, tone = 'default' }) => {
+  const [adding, setAdding] = useState(false);
+  const [draft, setDraft] = useState('');
+
+  const commitAdd = () => {
+    const trimmed = draft.trim();
+    if (trimmed && !tags.includes(trimmed)) {
+      onChange([...tags, trimmed]);
+    }
+    setDraft('');
+    setAdding(false);
+  };
+
+  const chipClass = tone === 'danger'
+    ? 'bg-rose-50 text-rose-700'
+    : 'bg-[#F6F6F3] text-[#16171A]';
+
+  return (
+    <div className="space-y-1.5">
+      <label className="text-[11px] font-medium text-[#5A5C63]">{label}</label>
+      <div className="flex flex-wrap gap-1.5">
+        {tags.map((tag) => (
+          <span key={tag} className={`inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full ${chipClass}`}>
+            {tag}
+            <button type="button" onClick={() => onChange(tags.filter(t => t !== tag))} className="cursor-pointer">
+              <X className="w-3 h-3" />
+            </button>
+          </span>
+        ))}
+        {adding ? (
+          <input
+            autoFocus
+            value={draft}
+            onChange={(e) => setDraft(e.target.value)}
+            onBlur={commitAdd}
+            onKeyDown={(e) => { if (e.key === 'Enter') commitAdd(); if (e.key === 'Escape') { setDraft(''); setAdding(false); } }}
+            className="text-xs font-medium px-2.5 py-1 rounded-full border border-[#D8D8D3] outline-none w-28"
+          />
+        ) : (
+          <button
+            type="button"
+            onClick={() => setAdding(true)}
+            className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full border border-dashed border-[#D8D8D3] text-[#8E9097] cursor-pointer"
+          >
+            <Plus className="w-3 h-3" /> Add
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};
 
 interface ProductDraft {
   title: string;
@@ -162,12 +219,16 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
     }
   };
 
-  const handleRemoveLookingFor = (tag: string) => {
-    setLookingFor(prev => prev.filter(t => t !== tag));
-  };
-
   const updatePendingPitch = (value: string) => {
     setPendingProfile(prev => prev ? { ...prev, agentSpec: { ...prev.agentSpec, oneLinePitch: value } } : prev);
+  };
+
+  const updatePendingApprovedTopics = (topics: string[]) => {
+    setPendingProfile(prev => prev ? { ...prev, agentSpec: { ...prev.agentSpec, approvedTopics: topics } } : prev);
+  };
+
+  const updatePendingDisallowedTopics = (topics: string[]) => {
+    setPendingProfile(prev => prev ? { ...prev, agentSpec: { ...prev.agentSpec, disallowedTopics: topics } } : prev);
   };
 
   const stepTitles = ['About you', 'Your products', 'Brief your avatar'];
@@ -409,10 +470,12 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
             </div>
 
             {pendingProfile && (
-              <div className="bg-white rounded-2xl border border-[#D8D8D3] p-4 space-y-3.5">
+              <div className="bg-white rounded-2xl border border-[#D8D8D3] p-4 space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-semibold text-[#8E9097] uppercase tracking-wider">Avatar specification</span>
-                  <span className="text-[11px] font-medium text-[#5558E8]">Tap any field to edit</span>
+                  <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#5558E8]">
+                    <Pencil className="w-3 h-3" /> Tap any field to edit
+                  </span>
                 </div>
 
                 <div className="space-y-1.5">
@@ -425,22 +488,34 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                   />
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-[11px] font-medium text-[#5A5C63]">Looking for</label>
-                  <div className="flex flex-wrap gap-1.5">
-                    {lookingFor.map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-[#EEF0FD] text-[#5558E8]"
-                      >
-                        {tag}
-                        <button type="button" onClick={() => handleRemoveLookingFor(tag)} className="cursor-pointer">
-                          <X className="w-3 h-3" />
-                        </button>
-                      </span>
-                    ))}
+                <EditableTagGroup label="Looking for" tags={lookingFor} onChange={setLookingFor} />
+
+                {pendingProfile.agentSpec.products.length > 0 && (
+                  <div className="space-y-1.5">
+                    <label className="text-[11px] font-medium text-[#5A5C63]">Product cards</label>
+                    <div className="space-y-2">
+                      {pendingProfile.agentSpec.products.map((p, idx) => (
+                        <div key={idx} className="p-3 bg-[#F6F6F3] rounded-xl border border-[#E2E2DC]">
+                          <div className="font-semibold text-sm text-[#16171A]">{p.title}</div>
+                          <div className="text-xs text-[#5A5C63] mt-0.5 leading-relaxed">{p.description}</div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
+
+                <EditableTagGroup
+                  label="Can discuss"
+                  tags={pendingProfile.agentSpec.approvedTopics}
+                  onChange={updatePendingApprovedTopics}
+                />
+
+                <EditableTagGroup
+                  label="Off-limits"
+                  tags={pendingProfile.agentSpec.disallowedTopics}
+                  onChange={updatePendingDisallowedTopics}
+                  tone="danger"
+                />
               </div>
             )}
           </div>
