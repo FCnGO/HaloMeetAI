@@ -216,23 +216,30 @@ export default function App() {
     });
   };
 
-  const handleRunMatchmaking = async (force = false) => {
+  const handleRunMatchmaking = async (force = false, announce = false) => {
     setMatchmakingLoading(true);
     setMatchmakingError(null);
     try {
       const res = await api.runMatchmaking(currentPersona.id, force);
       setMatchmakingResult(res);
       setMatchmakingCached(res.cached);
+      if (announce) {
+        const count = res.matches?.length || 0;
+        showNotification(`Your avatar finished networking the room — ${count} ${count === 1 ? 'match' : 'matches'} ranked. Check Matches →`, 'success');
+      }
     } catch (err: any) {
       console.error('Matchmaking error:', err);
       setMatchmakingError(err?.message || 'Failed to analyze matchmaking. Please retry.');
+      if (announce) {
+        showNotification('Your avatar could not finish networking the room. Try Re-match from the Matches tab.', 'error');
+      }
     } finally {
       setMatchmakingLoading(false);
     }
   };
 
-  const handleRunAgentNetwork = async () => {
-    await handleRunMatchmaking(false);
+  const handleRunAgentNetwork = async (announce = false) => {
+    await handleRunMatchmaking(false, announce);
   };
 
   const handleRequestIntroduction = async (targetProfileId: string, initialNote: string, conversationId?: string) => {

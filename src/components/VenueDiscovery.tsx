@@ -28,7 +28,7 @@ interface VenueDiscoveryProps {
   onNavigateToMatches?: () => void;
   matchmakingResult?: MatchmakingResult | null;
   matchmakingLoading?: boolean;
-  onRunAgentNetwork?: () => void | Promise<void>;
+  onRunAgentNetwork?: (announce?: boolean) => void | Promise<void>;
 }
 
 export const VenueDiscovery: React.FC<VenueDiscoveryProps> = ({
@@ -69,12 +69,17 @@ export const VenueDiscovery: React.FC<VenueDiscoveryProps> = ({
   const handleToggleVisibility = async () => {
     setIsTogglingVisibility(true);
     try {
+      const turningOn = !isVisible;
       const updated = {
         ...currentPersona,
-        permissions: { ...currentPersona.permissions, showPresence: !isVisible }
+        permissions: { ...currentPersona.permissions, showPresence: turningOn }
       };
       const res = await api.saveProfile(updated);
       onProfileUpdated?.(res.profile);
+      if (turningOn) {
+        // Fire-and-forget: avatar starts networking the whole room the moment you go visible.
+        onRunAgentNetwork?.(true);
+      }
     } catch (err) {
       console.error('Failed to toggle visibility:', err);
     } finally {
@@ -308,46 +313,31 @@ export const VenueDiscovery: React.FC<VenueDiscoveryProps> = ({
         </div>
       )}
 
-      {isVisible && (
+      {isVisible && durationPickerExpanded && (
         <div className="clean-card p-3.5 space-y-2">
-          {durationPickerExpanded ? (
-            <>
-              <div className="flex items-center justify-between text-xs font-semibold text-[#16171A]">
-                <span>Stay visible for</span>
-                <span className="text-[11px] font-medium text-[#8E9097]">Until {currentPersona.availableUntil ? new Date(currentPersona.availableUntil).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : `${currentPersona.availabilityMinutes}m`}</span>
-              </div>
-              <div className="grid grid-cols-4 gap-1.5">
-                {DURATION_OPTIONS.map((d) => (
-                  <button
-                    key={d.id}
-                    type="button"
-                    onClick={() => {
-                      setVisibilityDuration(d.id);
-                      setDurationPickerExpanded(false);
-                    }}
-                    className={`py-1.5 rounded-full text-[11px] font-semibold border transition-colors cursor-pointer ${
-                      visibilityDuration === d.id
-                        ? 'bg-[#EEF0FD] text-[#5558E8] border-[#5558E8]'
-                        : 'bg-[#F6F6F3] text-[#16171A] border-[#E2E2DC] hover:bg-white'
-                    }`}
-                  >
-                    {d.label}
-                  </button>
-                ))}
-              </div>
-            </>
-          ) : (
-            <button
-              type="button"
-              onClick={() => setDurationPickerExpanded(true)}
-              className="w-full flex items-center justify-between cursor-pointer"
-            >
-              <span className="text-xs font-semibold text-[#16171A]">
-                Visible for {selectedDurationLabel} · Until {currentPersona.availableUntil ? new Date(currentPersona.availableUntil).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : `${currentPersona.availabilityMinutes}m`}
-              </span>
-              <ChevronDown className="w-3.5 h-3.5 text-[#8E9097] shrink-0" />
-            </button>
-          )}
+          <div className="flex items-center justify-between text-xs font-semibold text-[#16171A]">
+            <span>Stay visible for</span>
+            <span className="text-[11px] font-medium text-[#8E9097]">Until {currentPersona.availableUntil ? new Date(currentPersona.availableUntil).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : `${currentPersona.availabilityMinutes}m`}</span>
+          </div>
+          <div className="grid grid-cols-4 gap-1.5">
+            {DURATION_OPTIONS.map((d) => (
+              <button
+                key={d.id}
+                type="button"
+                onClick={() => {
+                  setVisibilityDuration(d.id);
+                  setDurationPickerExpanded(false);
+                }}
+                className={`py-1.5 rounded-full text-[11px] font-semibold border transition-colors cursor-pointer ${
+                  visibilityDuration === d.id
+                    ? 'bg-[#EEF0FD] text-[#5558E8] border-[#5558E8]'
+                    : 'bg-[#F6F6F3] text-[#16171A] border-[#E2E2DC] hover:bg-white'
+                }`}
+              >
+                {d.label}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
@@ -540,7 +530,7 @@ export const VenueDiscovery: React.FC<VenueDiscoveryProps> = ({
         <div className="space-y-1.5">
           <button
             type="button"
-            onClick={onRunAgentNetwork}
+            onClick={() => onRunAgentNetwork?.()}
             disabled={matchmakingLoading}
             className="btn-primary-pill w-full h-12 text-base font-semibold shadow-sm disabled:opacity-70"
           >
