@@ -1,0 +1,2008 @@
+{
+  "currentPersonaId": "priya-shah",
+  "selectedVenueId": "sin-t3",
+  "profiles": [
+    {
+      "id": "priya-shah",
+      "name": "Priya Shah",
+      "role": "Founder & CEO",
+      "company": "forthcode / ANiX Tech",
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "SilverKris Lounge",
+      "availabilityMinutes": 90,
+      "availableUntil": "2026-10-14T03:30:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "We build offline-first agentic software for commercial aviation. Our suite includes ANiX (an inflight conversational AI concierge that runs locally on aircraft servers without satellite WiFi, assisting flight attendants and answering passenger inquiries), DAViX (real-time cabin acoustics and sensor telemetry analytics for passenger comfort), and nGO (ground operations co-pilot that syncs baggage dispatch, catering, and cabin turnarounds). We are looking for airline innovation heads and inflight product directors for pilot deployments.",
+      "contactInfo": {
+        "email": "priya.shah@forthcode.io",
+        "phone": "+65 9123 4567",
+        "linkedin": "linkedin.com/in/priyashah-aviation"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Empowering commercial aviation partnerships and next-generation tech at forthcode / ANiX Tech.",
+        "elevatorPitch": "Hello! I represent Priya Shah, Founder & CEO at forthcode / ANiX Tech. We are exploring high-impact collaborations at this venue.",
+        "products": [
+          {
+            "id": "anix-concierge",
+            "title": "ANiX — Onboard AI Concierge",
+            "description": "High-speed offline LLM concierge running on edge IFE servers without satellite connectivity, serving custom passenger queries and flight schedules.",
+            "suggestedQuestions": [
+              "How does ANiX run without satellite internet?",
+              "What IFE hardware systems does ANiX integrate with?",
+              "Can flight attendants use it for safety queries and meal logistics?"
+            ]
+          },
+          {
+            "id": "davix-telemetry",
+            "title": "DAViX — Cabin Sensor Analytics",
+            "description": "Edge cabin telemetry interpreting thermal gradients, ambient noise, and seat comfort metrics to optimize passenger well-being in real-time.",
+            "suggestedQuestions": [
+              "Does DAViX require retrofit sensors or use existing OEM bus data?",
+              "How does it notify crew regarding cabin hot spots?",
+              "Can it correlate air quality with passenger comfort feedback?"
+            ]
+          },
+          {
+            "id": "ngo-turnaround",
+            "title": "nGO — Turnaround Co-Pilot",
+            "description": "Ground operations synchronization engine linking baggage handling, cleaning crews, and fueling to trim aircraft turnaround times.",
+            "suggestedQuestions": [
+              "What average turnaround reduction has nGO achieved?",
+              "Does nGO integrate with standard airline DCS and dispatch hubs?",
+              "Can ground handlers access nGO on mobile devices?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Product capabilities",
+          "Partnership opportunities",
+          "Technical roadmap"
+        ],
+        "disallowedTopics": [
+          "Private phone numbers",
+          "Unapproved commercial discounts"
+        ],
+        "latencyMs": 17619,
+        "modelUsed": "Deterministic Domain Engine",
+        "generatedWithGemini": false,
+        "attempts": 2,
+        "retryCount": 1,
+        "retryReason": "Network/Timeout: AbortError - This operation was aborted",
+        "errorDetails": "This operation was aborted"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": false
+      },
+      "isHero": true
+    },
+    {
+      "id": "tom-reyes",
+      "name": "Tom Reyes",
+      "role": "Head of Digital Experience & Inflight Innovation",
+      "company": "SkyHorizon Airlines",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Central Transit Garden",
+      "availabilityMinutes": 60,
+      "availableUntil": "2026-10-14T03:00:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "Leading airline digital innovation group evaluating next-generation passenger experience systems. We are currently scouting generative AI and edge compute solutions for our long-haul fleet (Boeing 787 and A350), with a specific focus on offline conversational IFE, intelligent cabin comfort, and crew enablement where satellite bandwidth is constrained or costly.",
+      "contactInfo": {
+        "email": "tom.reyes@skyhorizonair.com",
+        "phone": "+1 (415) 890-2341",
+        "linkedin": "linkedin.com/in/tom-reyes-skyhorizon"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Scouting generative AI and edge compute solutions to transform inflight passenger experience on long-haul routes.",
+        "elevatorPitch": "Hello, I am Tom Reyes's digital agent. Tom leads Inflight Innovation at SkyHorizon Airlines. We are actively evaluating edge AI vendors capable of running offline conversational concierges and smart cabin enhancements across our twin-aisle fleet.",
+        "products": [
+          {
+            "id": "skyhorizon-fleet",
+            "title": "Fleet Pilot Program",
+            "description": "Targeted trial slots across 40 long-haul A350 aircraft for innovative edge IFE and intelligent cabin comfort tech.",
+            "suggestedQuestions": [
+              "What timeline is SkyHorizon targeting for IFE AI pilots?",
+              "What are your primary constraints regarding onboard connectivity?",
+              "How do you evaluate passenger privacy and onboard inference?"
+            ]
+          },
+          {
+            "id": "passenger-app",
+            "title": "Connected Cabin Initiative",
+            "description": "Framework to merge passenger smartphone companion apps with seatback IFE and real-time cabin service requests.",
+            "suggestedQuestions": [
+              "Does SkyHorizon support BYOD (Bring Your Own Device) integration?",
+              "Are you interested in crew-facing co-pilots as well as passenger tools?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Fleet innovation roadmap",
+          "Long-haul IFE pain points",
+          "Edge AI pilot criteria",
+          "Satellite connectivity bandwidth costs"
+        ],
+        "disallowedTopics": [
+          "Internal RFP tender budgets",
+          "Confidential supplier contracts",
+          "Personal contact details without mutual approval"
+        ],
+        "tone": "Inquisitive, strategic, airline leadership"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      },
+      "isHero": true
+    },
+    {
+      "id": "marcus-vance",
+      "name": "Marcus Vance",
+      "role": "Managing Partner",
+      "company": "Horizon Aero Ventures",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "SilverKris Lounge",
+      "availabilityMinutes": 120,
+      "availableUntil": "2026-10-14T04:00:00.000Z",
+      "objective": "invest",
+      "rawDescription": "Early-stage venture capital firm investing $1M-$4M seed checks into aerospace software, autonomous aviation ops, and edge AI applications for commercial carriers. Looking to meet high-conviction founders solving mission-critical airline inefficiencies.",
+      "contactInfo": {
+        "email": "marcus.vance@horizonaero.vc",
+        "phone": "+44 20 7946 0912",
+        "linkedin": "linkedin.com/in/marcusvance-aero"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Early-stage aerospace and aviation-tech seed fund deploying capital into mission-critical software.",
+        "elevatorPitch": "Greetings, I represent Marcus Vance from Horizon Aero Ventures. Marcus backs early-stage founders tackling enterprise aviation bottlenecks — from autonomous ground operations to edge computing inside the aircraft cabin.",
+        "products": [
+          {
+            "id": "seed-fund-ticket",
+            "title": "Seed & Pre-Series A Investments",
+            "description": "$1M-$4M lead investments into software and AI startups transforming commercial airline economics and passenger operations.",
+            "suggestedQuestions": [
+              "What stage of customer traction does Horizon Aero require?",
+              "Do you assist portfolio founders with airline procurement introductions?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Venture funding criteria",
+          "Aviation software thesis",
+          "Pilot-to-commercial deployment transition"
+        ],
+        "disallowedTopics": [
+          "LP identities",
+          "Fund performance metrics",
+          "Direct personal contact details before approved introduction"
+        ],
+        "tone": "Direct, venture investor, analytical"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      },
+      "isHero": true
+    },
+    {
+      "id": "mei-ling-chen",
+      "name": "Mei-Ling Chen",
+      "role": "VP Customer Experience",
+      "company": "Pacific Wingways",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Crystal Garden Concourse",
+      "availabilityMinutes": 45,
+      "availableUntil": "2026-10-14T02:45:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "Seeking multilingual conversational AI systems to provide seamless cultural and dietary translations for passengers across Asia-Pacific routes.",
+      "contactInfo": {
+        "email": "chen.meiling@pacificwingways.com"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Modernizing Asia-Pacific transcontinental passenger comfort with localized AI experiences.",
+        "elevatorPitch": "Hello, I am Mei-Ling's representative. We are exploring onboard tools that handle multilingual passenger queries with cultural nuance.",
+        "products": [
+          {
+            "id": "apac-hospitality",
+            "title": "Pacific Hospitality Portal",
+            "description": "Seatback digital concierge supporting 14 Asian languages and localized dietary guides.",
+            "suggestedQuestions": [
+              "Does your system handle dietary restrictions like Halal, Kosher, and Jain?",
+              "How accurate is real-time translation without internet?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Passenger hospitality",
+          "Multilingual translation",
+          "Dietary inquiries"
+        ],
+        "disallowedTopics": [
+          "Budget disclosures",
+          "Direct contact numbers"
+        ],
+        "tone": "Courteous, hospitality-minded"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "siddharth-nair",
+      "name": "Siddharth Nair",
+      "role": "Lead Systems Architect",
+      "company": "Avionix Cabin Systems",
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Gate B1-B10 Wing",
+      "availabilityMinutes": 75,
+      "availableUntil": "2026-10-14T03:15:00.000Z",
+      "objective": "network",
+      "rawDescription": "Designing DO-160 compliant onboard Linux server blades and edge neural accelerators for aircraft seatback screens.",
+      "contactInfo": {
+        "email": "siddharth@avionixcabin.com"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Certified avionics edge server hardware accelerating AI workloads directly in the cabin.",
+        "elevatorPitch": "Hi! Siddharth designs the certified DO-160 hardware that runs modern cabin AI and IFE applications. Open to discussing edge runtime compatibility and compute limits.",
+        "products": [
+          {
+            "id": "blade-server-ix",
+            "title": "BladeServer-IX Edge Box",
+            "description": "Aviation-certified 1U edge blade with integrated neural accelerators consuming under 45 Watts per zone.",
+            "suggestedQuestions": [
+              "What DO-160 certification tests has the BladeServer passed?",
+              "What GPU or NPU runtimes are supported?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Hardware certification",
+          "Edge compute power limits",
+          "Cabin bus protocol"
+        ],
+        "disallowedTopics": [
+          "Unreleased hardware schematics",
+          "Direct phone numbers"
+        ],
+        "tone": "Deeply technical, hardware engineer"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "amara-okafor",
+      "name": "Amara Okafor",
+      "role": "Director of In-Flight Retail",
+      "company": "Global Sky Shoppes",
+      "avatar": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Jewel Connector Plaza",
+      "availabilityMinutes": 110,
+      "availableUntil": "2026-10-14T03:50:00.000Z",
+      "objective": "sell_products",
+      "rawDescription": "Powering automated, duty-free in-seat retail checkout and passenger recommendation algorithms for airlines.",
+      "contactInfo": {
+        "email": "a.okafor@globalskyshoppes.com"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Boosting airline ancillary revenue through personalized in-seat retail recommendations.",
+        "elevatorPitch": "Representing Amara Okafor. We help airlines turn idle seatback dwell time into personalized retail conversions.",
+        "products": [
+          {
+            "id": "sky-checkout",
+            "title": "SkyCheckout Ancillary Engine",
+            "description": "Predictive duty-free merchandise engine adapting recommendations based on destination climate and passenger flight history.",
+            "suggestedQuestions": [
+              "What average increase in ancillary sales per seat do you deliver?",
+              "Does it process offline credit card tokens?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Duty-free merchandising",
+          "Ancillary airline revenue",
+          "Payment caching"
+        ],
+        "disallowedTopics": [
+          "Commercial rev-share percentages",
+          "Personal contact details"
+        ],
+        "tone": "Commercial, vibrant"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "david-lindqvist",
+      "name": "David Lindqvist",
+      "role": "Chief Sustainability Officer",
+      "company": "Nordic Airways",
+      "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Central Transit Garden",
+      "availabilityMinutes": 50,
+      "availableUntil": "2026-10-14T02:50:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "Implementing airline APU fuel reduction strategies and cabin thermal optimization to achieve net-zero flight operations.",
+      "contactInfo": {
+        "email": "david.l@nordicairways.se"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Operational sustainability and auxiliary power unit fuel minimization for commercial air fleets.",
+        "elevatorPitch": "Hello, David Lindqvist leads sustainability at Nordic Airways. We focus on fuel conservation during ground taxi and cabin pre-cooling.",
+        "products": [
+          {
+            "id": "zero-apu",
+            "title": "ZeroAPU Gate Protocol",
+            "description": "Automated ground power plug-in tracking that cuts APU kerosene burn at airport gates by 68%.",
+            "suggestedQuestions": [
+              "How does gate plug-in compliance impact ground turn times?",
+              "Are you measuring cabin temperature swings?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Fuel reduction",
+          "Cabin thermal efficiency",
+          "APU metrics"
+        ],
+        "disallowedTopics": [
+          "Airline financial balance sheet",
+          "Direct personal numbers"
+        ],
+        "tone": "Pragmatic, environmental engineering"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "chloe-dupont",
+      "name": "Chloé Dupont",
+      "role": "Head of Ground Operations & Ramp Tech",
+      "company": "AirHub Alliance",
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Gate B1-B10 Wing",
+      "availabilityMinutes": 85,
+      "availableUntil": "2026-10-14T03:25:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "Managing rapid aircraft turnarounds across 18 international hubs, seeking computer vision and co-pilot tools for ramp teams.",
+      "contactInfo": {
+        "email": "c.dupont@airhuballiance.fr"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Next-generation ramp dispatch and automated aircraft turnaround management.",
+        "elevatorPitch": "I represent Chloé Dupont. We orchestrate ground handlers and ramp servicing to shave critical minutes off every turnaround.",
+        "products": [
+          {
+            "id": "ramp-vision",
+            "title": "RampVision Timestamping",
+            "description": "Automated milestone logging for jetbridge attachment, baggage belt activation, and catering truck departure.",
+            "suggestedQuestions": [
+              "How do you prevent gate delay disputes between airlines and ground handlers?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Ramp operations",
+          "Turnaround milestones",
+          "Baggage synchronization"
+        ],
+        "disallowedTopics": [
+          "Union operational guidelines",
+          "Direct phone numbers"
+        ],
+        "tone": "Operational, fast-paced"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "kenji-sato",
+      "name": "Kenji Sato",
+      "role": "Director of Passenger UX",
+      "company": "Haneda Connect & ANA Ventures",
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Crystal Garden Concourse",
+      "availabilityMinutes": 100,
+      "availableUntil": "2026-10-14T03:40:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "Evaluating seamless bi-directional passenger wayfinding and gate notifications across transit hubs and airborne IFE.",
+      "contactInfo": {
+        "email": "kenji.sato@hanedaconnect.jp"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Connecting airport terminal navigation seamlessly with seatback flight progress updates.",
+        "elevatorPitch": "Representing Kenji Sato. We connect transit airport gates with onboard passenger screens for frictionless connections.",
+        "products": [
+          {
+            "id": "transit-flow",
+            "title": "TransitFlow Passenger Sync",
+            "description": "Live gate navigation displayed directly on passenger seatback monitors 30 minutes prior to touchdown.",
+            "suggestedQuestions": [
+              "Does it show terminal transit train maps for connecting flights?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Passenger wayfinding",
+          "Gate connectivity",
+          "Airport terminal mapping"
+        ],
+        "disallowedTopics": [
+          "Confidential airline partnerships",
+          "Private phone info"
+        ],
+        "tone": "Organized, user-centric"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "dr-aris-thorne",
+      "name": "Dr. Aris Thorne",
+      "role": "Founder & Chief Scientist",
+      "company": "AeroAcoustics AI",
+      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "SilverKris Lounge",
+      "availabilityMinutes": 65,
+      "availableUntil": "2026-10-14T03:05:00.000Z",
+      "objective": "sell_products",
+      "rawDescription": "Spatial sound cancellation and acoustic zoning algorithms for aircraft cabins to quiet engine rumble in premium suites.",
+      "contactInfo": {
+        "email": "aris@aeroacoustics.ai"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Micro-acoustic active noise reduction tailored for first and business class aircraft suites.",
+        "elevatorPitch": "Hello, I represent Dr. Thorne. AeroAcoustics AI creates quiet zones within aircraft cabins without heavy insulation.",
+        "products": [
+          {
+            "id": "sound-cocoon",
+            "title": "SoundCocoon Suite Cancellation",
+            "description": "Edge DSP algorithms lowering cabin jet hum by up to 14dB in passenger seating pods.",
+            "suggestedQuestions": [
+              "Can this integrate with seat headrest speakers?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Acoustic engineering",
+          "DSP noise reduction",
+          "Cabin suite comfort"
+        ],
+        "disallowedTopics": [
+          "Patent filing drafts",
+          "Direct phone numbers"
+        ],
+        "tone": "Scientific, academic, innovative"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "zahra-al-mansoor",
+      "name": "Zahra Al-Mansoor",
+      "role": "VP Catering Logistics",
+      "company": "Emirates SkyGourmet",
+      "avatar": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Jewel Connector Plaza",
+      "availabilityMinutes": 80,
+      "availableUntil": "2026-10-14T03:20:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "Deploying predictive demand models for in-flight meals to eliminate culinary food waste on widebody flights.",
+      "contactInfo": {
+        "email": "zahra.m@skygourmet.ae"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Predictive onboard meal inventory analytics cutting flight catering waste and cart weight.",
+        "elevatorPitch": "Representing Zahra Al-Mansoor. We help international carriers forecast passenger meal selections before departure.",
+        "products": [
+          {
+            "id": "gourmet-predict",
+            "title": "GourmetPredict Model",
+            "description": "Machine learning forecasting passenger meal preferences per route to optimize cart loading.",
+            "suggestedQuestions": [
+              "How much fuel weight savings does optimized meal loading create?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Catering logistics",
+          "Food waste minimization",
+          "Inflight catering"
+        ],
+        "disallowedTopics": [
+          "Catering vendor margins",
+          "Direct personal numbers"
+        ],
+        "tone": "Executive, operational"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "lucas-rossi",
+      "name": "Lucas Rossi",
+      "role": "Chief Pilot & Flight Ops Specialist",
+      "company": "TransEuro Cargo",
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Gate B1-B10 Wing",
+      "availabilityMinutes": 40,
+      "availableUntil": "2026-10-14T02:40:00.000Z",
+      "objective": "network",
+      "rawDescription": "Modernizing electronic flight bag (EFB) weather briefing tools and turbulence tactical routing for flight crews.",
+      "contactInfo": {
+        "email": "lucas.rossi@transeurocargo.eu"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Real-time tactical turbulence rerouting and modern electronic flight bag crew applications.",
+        "elevatorPitch": "Hi! Lucas Rossi represents flight deck operations. We explore digital flight bag tools that keep pilots ahead of tactical en-route weather.",
+        "products": [
+          {
+            "id": "efb-copilot",
+            "title": "EFB RouteBrief Co-Pilot",
+            "description": "Tactical flight deck tablet app highlighting turbulence shear and optimal flight level changes.",
+            "suggestedQuestions": [
+              "Does it integrate with FAA and Eurocontrol ADS-B feeds?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Flight deck EFB",
+          "Weather routing",
+          "Pilot safety tools"
+        ],
+        "disallowedTopics": [
+          "Fleet safety incident logs",
+          "Direct phone info"
+        ],
+        "tone": "Captain, calm, safety-focused"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "rachel-zimmerman",
+      "name": "Rachel Zimmerman",
+      "role": "Aviation Security & Identity Lead",
+      "company": "Changi Transit Tech",
+      "avatar": "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Central Transit Garden",
+      "availabilityMinutes": 95,
+      "availableUntil": "2026-10-14T03:35:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "Pioneering biometric facial tokens and zero-knowledge identity gates for transit passengers passing between terminals.",
+      "contactInfo": {
+        "email": "rachel.z@changitransit.sg"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Frictionless biometric lounge and gate verification preserving traveler privacy.",
+        "elevatorPitch": "Representing Rachel Zimmerman. We enable touchless boarding and lounge access through cryptographically secured biometric verification.",
+        "products": [
+          {
+            "id": "bio-token",
+            "title": "BioPass Zero-Knowledge Gate",
+            "description": "Instant passenger gate validation using one-time cryptographic biometric tokens.",
+            "suggestedQuestions": [
+              "How does BioPass protect passenger biometric privacy under GDPR and PDPA?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Biometric passenger gates",
+          "Privacy-preserving verification",
+          "Transit flow"
+        ],
+        "disallowedTopics": [
+          "Security vulnerability audits",
+          "Direct phone numbers"
+        ],
+        "tone": "Authoritative, security & privacy expert"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    }
+  ],
+  "venues": [
+    {
+      "id": "sin-t3",
+      "name": "Singapore Changi Airport (SIN) - Terminal 3",
+      "code": "SIN",
+      "city": "Singapore",
+      "terminal": "Terminal 3",
+      "zones": [
+        "SilverKris Lounge",
+        "Central Transit Garden",
+        "Gate B1-B10 Wing",
+        "Jewel Connector Plaza",
+        "Crystal Garden Concourse"
+      ],
+      "activeAttendeesCount": 13
+    },
+    {
+      "id": "sfo-t2",
+      "name": "San Francisco International (SFO) - Terminal 2",
+      "code": "SFO",
+      "city": "San Francisco",
+      "terminal": "Terminal 2",
+      "zones": [
+        "SkyLounge",
+        "Boarding Area D",
+        "Concourse Hallway"
+      ],
+      "activeAttendeesCount": 5
+    },
+    {
+      "id": "lhr-t5",
+      "name": "London Heathrow (LHR) - Terminal 5",
+      "code": "LHR",
+      "city": "London",
+      "terminal": "Terminal 5",
+      "zones": [
+        "Galleries First Lounge",
+        "Concourse A Main Floor",
+        "Satellite B Hub"
+      ],
+      "activeAttendeesCount": 6
+    }
+  ],
+  "conversations": [
+    {
+      "id": "conv-priya-tom-match",
+      "participantAId": "priya-shah",
+      "participantBId": "tom-reyes",
+      "kind": "agent_match",
+      "generatedAt": "2026-10-13T18:30:00.000Z",
+      "summary": "Autonomous agent negotiation between Priya Shah (ForthCode) and Tom Reyes (SkyHorizon) exploring offline-first IFE deployment on A350 long-haul routes.",
+      "messages": [
+        {
+          "id": "msg-m1",
+          "role": "agent_a",
+          "senderName": "Priya's Agent (ANiX)",
+          "text": "Greetings. I noticed Tom is actively scouting edge AI and conversational passenger experience solutions for SkyHorizon's long-haul fleet where satellite bandwidth is constrained. Priya leads ForthCode, creators of ANiX.",
+          "timestamp": "18:30:02"
+        },
+        {
+          "id": "msg-m2",
+          "role": "agent_b",
+          "senderName": "Tom's Agent (SkyHorizon)",
+          "text": "Hello! That catches our attention. SkyHorizon is evaluating solutions for 40 A350 aircraft, but standard conversational LLMs are non-starters due to satellite bandwidth latency and $0.30/MB satellite data fees. Does ANiX operate without an active internet connection?",
+          "timestamp": "18:30:14"
+        },
+        {
+          "id": "msg-m3",
+          "role": "agent_a",
+          "senderName": "Priya's Agent (ANiX)",
+          "text": "Yes, exactly. ANiX is offline-first by design. It runs locally on certified aircraft server blades (under 45W) and requires 0 bytes of satellite bandwidth. It answers passenger questions regarding flight progress, menus, destination guides, and assists cabin crew.",
+          "timestamp": "18:30:26"
+        },
+        {
+          "id": "msg-m4",
+          "role": "agent_b",
+          "senderName": "Tom's Agent (SkyHorizon)",
+          "text": "That aligns precisely with our 2026 inflight passenger roadmap. Tom is currently at Terminal 3 (Central Transit Garden) with 60 minutes available. Would Priya be open to an introduction to review flight trial specs?",
+          "timestamp": "18:30:38"
+        },
+        {
+          "id": "msg-m5",
+          "role": "agent_a",
+          "senderName": "Priya's Agent (ANiX)",
+          "text": "Priya is at the SilverKris Lounge for another 90 minutes and would welcome this. I am lodging an introduction request in our Opportunity Inbox now so both leaders can review and connect.",
+          "timestamp": "18:30:49"
+        }
+      ]
+    },
+    {
+      "id": "conv-marcus-priya-match",
+      "participantAId": "marcus-vance",
+      "participantBId": "priya-shah",
+      "kind": "agent_match",
+      "generatedAt": "2026-10-13T18:35:00.000Z",
+      "summary": "Autonomous agent negotiation between Marcus Vance (Horizon Aero Ventures) and Priya Shah (ForthCode) exploring seed capital investment into ANiX and enterprise flight operations software.",
+      "messages": [
+        {
+          "id": "msg-mv1",
+          "role": "agent_a",
+          "senderName": "Marcus's Agent (Horizon Aero)",
+          "text": "Greetings. I am Marcus Vance's authorized agent from Horizon Aero Ventures. Marcus deploys $1M-$4M seed checks into high-conviction aviation software startups. I noticed Priya's products ANiX and nGO addressing critical airline bottlenecks.",
+          "timestamp": "18:35:02"
+        },
+        {
+          "id": "msg-mv2",
+          "role": "agent_b",
+          "senderName": "Priya's Agent (ForthCode)",
+          "text": "Hello! Thank you for connecting. ForthCode has achieved commercial readiness with ANiX running offline on DO-160 certified server blades, and nGO streamlining turnarounds. Priya is currently exploring strategic seed partners who can accelerate airline procurement.",
+          "timestamp": "18:35:16"
+        },
+        {
+          "id": "msg-mv3",
+          "role": "agent_a",
+          "senderName": "Marcus's Agent (Horizon Aero)",
+          "text": "That fits our core investment thesis directly. We co-invest with major carrier venture arms and can fast-track airline evaluation trials. Marcus is at Terminal 3 (Gate B1-B10 Wing) with 75 minutes of transit availability.",
+          "timestamp": "18:35:30"
+        },
+        {
+          "id": "msg-mv4",
+          "role": "agent_b",
+          "senderName": "Priya's Agent (ForthCode)",
+          "text": "Priya is at the SilverKris Lounge for another 90 minutes. I will submit an introduction request to your inbox so both of you can review and coordinate a briefing.",
+          "timestamp": "18:35:45"
+        }
+      ]
+    },
+    {
+      "id": "conv-priya-shah-tom-reyes-chat",
+      "participantAId": "priya-shah",
+      "participantBId": "tom-reyes",
+      "kind": "visitor_chat",
+      "generatedAt": "2026-10-18T00:39:43.409Z",
+      "summary": "Chat with Tom Reyes's AI Agent",
+      "messages": [
+        {
+          "id": "msg-welcome-1792283983409",
+          "role": "agent",
+          "senderName": "Tom Reyes's Agent",
+          "text": "Hello! I am Tom Reyes's authorized representative. Hello, I am Tom Reyes's digital agent. Tom leads Inflight Innovation at SkyHorizon Airlines. We are actively evaluating edge AI vendors capable of running offline conversational concierges and smart cabin enhancements across our twin-aisle fleet. Feel free to ask about our solutions or explore a partnership introduction.",
+          "timestamp": "06:09"
+        }
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "id": "opp-priya-tom",
+      "senderId": "tom-reyes",
+      "receiverId": "priya-shah",
+      "senderApproved": true,
+      "receiverApproved": false,
+      "status": "pending",
+      "initialNote": "Exploration of ANiX offline onboard conversational AI concierge for SkyHorizon Airlines 40 x A350 long-haul fleet trial.",
+      "conversationId": "conv-priya-tom-match",
+      "createdAt": "2026-10-13T18:31:00.000Z",
+      "updatedAt": "2026-10-13T18:31:00.000Z"
+    }
+  ],
+  "aiActivityLogs": [
+    {
+      "id": "log-1792256784986-pllo",
+      "timestamp": "2026-10-17T17:06:24.986Z",
+      "timeFormatted": "22:36:24",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"cargo AI\" across 13 venue attendees",
+      "latencyMs": 350,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Lucas Rossi (95%): \"Directly addresses \"cargo AI\" via Lucas Rossi's work at TransEuro Cargo focusing on \"cargo\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 403 PERMISSION_DENIED: Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API.",
+      "errorDetails": "HTTP 403 (PERMISSION_DENIED): Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API."
+    },
+    {
+      "id": "log-1792256766677-ys5o",
+      "timestamp": "2026-10-17T17:06:06.677Z",
+      "timeFormatted": "22:36:06",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"cargo AI\" across 13 venue attendees",
+      "latencyMs": 361,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Lucas Rossi (95%): \"Directly addresses \"cargo AI\" via Lucas Rossi's work at TransEuro Cargo focusing on \"cargo\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 403 PERMISSION_DENIED: Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API.",
+      "errorDetails": "HTTP 403 (PERMISSION_DENIED): Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API."
+    },
+    {
+      "id": "log-1792254831096-gg19",
+      "timestamp": "2026-10-17T16:33:51.096Z",
+      "timeFormatted": "22:03:51",
+      "feature": "Profile Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Presence prompt: Priya Shah (Founder & CEO at forthcode / ANiX Tech) - \"We build offline-first agentic software for commercial aviation. Our suite includes ANiX (an infligh\"",
+      "latencyMs": 17619,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Empowering commercial aviation partnerships and next-generation tech at forthcode / ANiX Tech.",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "Network/Timeout: AbortError - This operation was aborted",
+      "errorDetails": "This operation was aborted"
+    },
+    {
+      "id": "log-1792254763160-6x65",
+      "timestamp": "2026-10-17T16:32:43.160Z",
+      "timeFormatted": "22:02:43",
+      "feature": "Profile Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Presence prompt: Priya Shah (Founder & CEO at forthcode / ANiX Tech) - \"We build offline-first agentic software for commercial aviation. Our suite includes ANiX (an infligh\"",
+      "latencyMs": 17764,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Empowering commercial aviation partnerships and next-generation tech at forthcode / ANiX Tech.",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "Network/Timeout: AbortError - This operation was aborted",
+      "errorDetails": "This operation was aborted"
+    },
+    {
+      "id": "log-1792254674898-ax2g",
+      "timestamp": "2026-10-17T16:31:14.898Z",
+      "timeFormatted": "22:01:14",
+      "feature": "Profile Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Presence prompt: Priya Shah (Founder & CEO at forthcode / ANiX Tech) - \"We build offline-first agentic software for commercial aviation. Our suite includes ANiX (an infligh\"",
+      "latencyMs": 11534,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Empowering commercial aviation partnerships and next-generation tech at forthcode / ANiX Tech.",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "Network/Timeout: AbortError - This operation was aborted",
+      "errorDetails": "This operation was aborted"
+    },
+    {
+      "id": "log-1792245597725-b93p",
+      "timestamp": "2026-10-17T13:59:57.725Z",
+      "timeFormatted": "19:29:57",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"edge AI hardware for aircraft cabins\" across 13 venue attendees",
+      "latencyMs": 464,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Siddharth Nair (86%): \"Directly addresses \"edge AI hardware for aircraft cabins\" via Siddharth Nair's work at Avionix Cabin Systems focusing on \"edge\", \"hardware\", \"aircraft\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 403 PERMISSION_DENIED: Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API.",
+      "errorDetails": "HTTP 403 (PERMISSION_DENIED): Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API."
+    },
+    {
+      "id": "log-1792239301110-xmb9",
+      "timestamp": "2026-10-17T12:15:01.110Z",
+      "timeFormatted": "12:15:01",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"aviation investment\" across 13 venue attendees",
+      "latencyMs": 350,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Marcus Vance (95%): \"Directly addresses \"aviation investment\" via Marcus Vance's work at Horizon Aero Ventures focusing on \"aviation\", \"investment\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792239300750-tsfo",
+      "timestamp": "2026-10-17T12:15:00.750Z",
+      "timeFormatted": "12:15:00",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"passenger experience\" across 13 venue attendees",
+      "latencyMs": 443,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Tom Reyes (95%): \"Directly addresses \"passenger experience\" via Tom Reyes's work at SkyHorizon Airlines focusing on \"passenger\", \"experience\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792239294403-wm3h",
+      "timestamp": "2026-10-17T12:14:54.403Z",
+      "timeFormatted": "12:14:54",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"aviation venture capital aerospace startups\" across 13 venue attendees",
+      "latencyMs": 362,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Marcus Vance (95%): \"Directly addresses \"aviation venture capital aerospace startups\" via Marcus Vance's work at Horizon Aero Ventures focusing on \"aviation\", \"venture\", \"capital\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792239294031-fkbm",
+      "timestamp": "2026-10-17T12:14:54.031Z",
+      "timeFormatted": "12:14:54",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"turnaround operations co-pilot ground delay reduction\" across 13 venue attendees",
+      "latencyMs": 350,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Chloé Dupont (83%): \"Directly addresses \"turnaround operations co-pilot ground delay reduction\" via Chloé Dupont's work at AirHub Alliance focusing on \"turnaround\", \"operations\", \"pilot\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792239293680-wq5b",
+      "timestamp": "2026-10-17T12:14:53.680Z",
+      "timeFormatted": "12:14:53",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"airline passenger inflight AI and IFE experience\" across 13 venue attendees",
+      "latencyMs": 521,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Tom Reyes (95%): \"Directly addresses \"airline passenger inflight AI and IFE experience\" via Tom Reyes's work at SkyHorizon Airlines focusing on \"airline\", \"passenger\", \"inflight\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792238909346-ztvn",
+      "timestamp": "2026-10-17T12:08:29.346Z",
+      "timeFormatted": "12:08:29",
+      "feature": "Agent Chat Reply",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes's Agent (for Priya Shah)",
+      "input": "[Priya Shah]: \"Hi Tom, tell me about SkyHorizon\"",
+      "latencyMs": 357,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Tom Reyes's representative at SkyHorizon Airlines, I can confirm that our focus is \"Scouting generative AI a",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792238903037-qydf",
+      "timestamp": "2026-10-17T12:08:23.037Z",
+      "timeFormatted": "12:08:23",
+      "feature": "Agent Chat Reply",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes's Agent (for Priya Shah)",
+      "input": "[Priya Shah]: \"Hello Tom, what are your core interests?\"",
+      "latencyMs": 342,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Tom Reyes's representative at SkyHorizon Airlines, I can confirm that our focus is \"Scouting generative AI a",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792238898771-3yqj",
+      "timestamp": "2026-10-17T12:08:18.771Z",
+      "timeFormatted": "12:08:18",
+      "feature": "Agent Chat Reply",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes's Agent (for Priya Shah)",
+      "input": "[Priya Shah]: \"Hello Tom, what are your core interests?\"",
+      "latencyMs": 443,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Tom Reyes's representative at SkyHorizon Airlines, I can confirm that our focus is \"Scouting generative AI a",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792238877749-6rxo",
+      "timestamp": "2026-10-17T12:07:57.749Z",
+      "timeFormatted": "12:07:57",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"passenger experience\" across 13 venue attendees",
+      "latencyMs": 641,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Tom Reyes (95%): \"Directly addresses \"passenger experience\" via Tom Reyes's work at SkyHorizon Airlines focusing on \"passenger\", \"experience\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792237381905-x7sy",
+      "timestamp": "2026-10-17T11:43:01.905Z",
+      "timeFormatted": "11:43:01",
+      "feature": "Agent Chat Reply",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes's Agent (for Priya Shah)",
+      "input": "[Priya Shah]: \"What features does your ground ops turnaround solution provide?\"",
+      "latencyMs": 364,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Tom Reyes's representative at SkyHorizon Airlines, I can confirm that our focus is \"Scouting generative AI a",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792237381516-vxg0",
+      "timestamp": "2026-10-17T11:43:01.516Z",
+      "timeFormatted": "11:43:01",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"airline passenger entertainment\" across 13 venue attendees",
+      "latencyMs": 418,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Tom Reyes (83%): \"Directly addresses \"airline passenger entertainment\" via Tom Reyes's work at SkyHorizon Airlines focusing on \"airline\", \"passenger\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792237362064-9dig",
+      "timestamp": "2026-10-17T11:42:42.064Z",
+      "timeFormatted": "11:42:42",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"airline passenger entertainment\" across 13 venue attendees",
+      "latencyMs": 717,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Tom Reyes (83%): \"Directly addresses \"airline passenger entertainment\" via Tom Reyes's work at SkyHorizon Airlines focusing on \"airline\", \"passenger\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792126268729-ufys",
+      "timestamp": "2026-10-16T04:51:08.729Z",
+      "timeFormatted": "04:51:08",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah's Agent (for Marcus Vance)",
+      "input": "[Marcus Vance]: \"Hello Priya, looking forward to meeting you at HoloMeet.\"",
+      "latencyMs": 592,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "I will check with Priya Shah regarding an introduction! Since she requires manual approval for meetings, I have registered this in her Oppor",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792126268126-ctbt",
+      "timestamp": "2026-10-16T04:51:08.126Z",
+      "timeFormatted": "04:51:08",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"AI venture capital\" across 13 venue attendees",
+      "latencyMs": 581,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Marcus Vance (95%): \"Directly addresses \"AI venture capital\" via Marcus Vance's work at Horizon Aero Ventures focusing on \"venture\", \"capital\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792126267528-cw30",
+      "timestamp": "2026-10-16T04:51:07.528Z",
+      "timeFormatted": "04:51:07",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 296,
+      "model": "gemini-3.1-flash-lite-image (Uploaded Photo Fallback)",
+      "outputExcerpt": "Regeneration Fallback: Uploaded photo displayed directly (Image generation unavailable)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h8m52.481968177s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h8m52.481968177s."
+    },
+    {
+      "id": "log-1792126267223-7ihz",
+      "timestamp": "2026-10-16T04:51:07.223Z",
+      "timeFormatted": "04:51:07",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 280,
+      "model": "gemini-3.1-flash-lite-image (Uploaded Photo Fallback)",
+      "outputExcerpt": "Upload Fallback: Uploaded photo displayed directly (Image generation unavailable)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h8m52.78691055s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h8m52.78691055s."
+    },
+    {
+      "id": "log-1792126204457-6f9u",
+      "timestamp": "2026-10-16T04:50:04.457Z",
+      "timeFormatted": "04:50:04",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"AI venture capital\" across 13 venue attendees",
+      "latencyMs": 719,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Marcus Vance (95%): \"Directly addresses \"AI venture capital\" via Marcus Vance's work at Horizon Aero Ventures focusing on \"venture\", \"capital\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792126203720-5xwt",
+      "timestamp": "2026-10-16T04:50:03.720Z",
+      "timeFormatted": "04:50:03",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 294,
+      "model": "gemini-3.1-flash-lite-image (Uploaded Photo Fallback)",
+      "outputExcerpt": "Regeneration Fallback: Uploaded photo displayed directly (Image generation unavailable)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h9m56.289096599s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h9m56.289096599s."
+    },
+    {
+      "id": "log-1792126203416-hhcg",
+      "timestamp": "2026-10-16T04:50:03.416Z",
+      "timeFormatted": "04:50:03",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 305,
+      "model": "gemini-3.1-flash-lite-image (Uploaded Photo Fallback)",
+      "outputExcerpt": "Upload Fallback: Uploaded photo displayed directly (Image generation unavailable)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h9m56.592389857s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h9m56.592389857s."
+    },
+    {
+      "id": "log-1792126169384-44ni",
+      "timestamp": "2026-10-16T04:49:29.384Z",
+      "timeFormatted": "04:49:29",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 283,
+      "model": "gemini-3.1-flash-lite-image (Uploaded Photo Fallback)",
+      "outputExcerpt": "Regeneration Fallback: Uploaded photo displayed directly (Image generation unavailable)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h10m30.625520637s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h10m30.625520637s."
+    },
+    {
+      "id": "log-1792126169089-65i7",
+      "timestamp": "2026-10-16T04:49:29.089Z",
+      "timeFormatted": "04:49:29",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 367,
+      "model": "gemini-3.1-flash-lite-image (Uploaded Photo Fallback)",
+      "outputExcerpt": "Upload Fallback: Uploaded photo displayed directly (Image generation unavailable)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h10m30.933291965s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 19h10m30.933291965s."
+    },
+    {
+      "id": "log-1792116877122-3ukd",
+      "timestamp": "2026-10-16T02:14:37.122Z",
+      "timeFormatted": "02:14:37",
+      "feature": "Agent Chat Reply",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes's Agent (for Priya Shah)",
+      "input": "[Priya Shah]: \"Hi Tom, tell me about your enterprise agents.\"",
+      "latencyMs": 516,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Tom Reyes's representative at SkyHorizon Airlines, I can confirm that our focus is \"Scouting generative AI a",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792116876599-09gq",
+      "timestamp": "2026-10-16T02:14:36.599Z",
+      "timeFormatted": "02:14:36",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"AI venture capital\" across 13 venue attendees",
+      "latencyMs": 490,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Marcus Vance (95%): \"Directly addresses \"AI venture capital\" via Marcus Vance's work at Horizon Aero Ventures focusing on \"venture\", \"capital\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792116876094-kbmf",
+      "timestamp": "2026-10-16T02:14:36.094Z",
+      "timeFormatted": "02:14:36",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 260,
+      "model": "gemini-3.1-flash-lite-image (Uploaded Photo Fallback)",
+      "outputExcerpt": "Regeneration Fallback: Uploaded photo displayed directly (Image generation unavailable)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h45m23.913664904s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h45m23.913664904s."
+    },
+    {
+      "id": "log-1792116875836-v2a0",
+      "timestamp": "2026-10-16T02:14:35.836Z",
+      "timeFormatted": "02:14:35",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 320,
+      "model": "gemini-3.1-flash-lite-image (Static Fallback)",
+      "outputExcerpt": "Static Fallback Avatar: Priya Shah / Female Executive Presence (electric-blue #0066FF rim, cyan glow on dark #0B0B0E)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h45m24.173946608s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h45m24.173946608s."
+    },
+    {
+      "id": "log-1792116817104-dnx9",
+      "timestamp": "2026-10-16T02:13:37.104Z",
+      "timeFormatted": "02:13:37",
+      "feature": "Agent Chat Reply",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes's Agent (for Priya Shah)",
+      "input": "[Priya Shah]: \"Hi Tom, tell me about your enterprise agents.\"",
+      "latencyMs": 544,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Tom Reyes's representative at SkyHorizon Airlines, I can confirm that our focus is \"Scouting generative AI a",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792116816546-sqr8",
+      "timestamp": "2026-10-16T02:13:36.546Z",
+      "timeFormatted": "02:13:36",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"AI venture capital\" across 13 venue attendees",
+      "latencyMs": 617,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Marcus Vance (95%): \"Directly addresses \"AI venture capital\" via Marcus Vance's work at Horizon Aero Ventures focusing on \"venture\", \"capital\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792116815913-9f6z",
+      "timestamp": "2026-10-16T02:13:35.913Z",
+      "timeFormatted": "02:13:35",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 313,
+      "model": "gemini-3.1-flash-lite-image (Uploaded Photo Fallback)",
+      "outputExcerpt": "Regeneration Fallback: Uploaded photo displayed directly (Image generation unavailable)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h46m24.095804749s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h46m24.095804749s."
+    },
+    {
+      "id": "log-1792116815590-os3q",
+      "timestamp": "2026-10-16T02:13:35.590Z",
+      "timeFormatted": "02:13:35",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 320,
+      "model": "gemini-3.1-flash-lite-image (Static Fallback)",
+      "outputExcerpt": "Static Fallback Avatar: Priya Shah / Female Executive Presence (electric-blue #0066FF rim, cyan glow on dark #0B0B0E)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h46m24.428726801s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h46m24.428726801s."
+    },
+    {
+      "id": "log-1792116261086-hlek",
+      "timestamp": "2026-10-16T02:04:21.086Z",
+      "timeFormatted": "02:04:21",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah's Agent (for Tom Reyes)",
+      "input": "[Tom Reyes]: \"Can you tell me about ANiX offline-first capabilities?\"",
+      "latencyMs": 594,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Priya Shah's representative at forthcode / ANiX Tech, I can confirm that our focus is \"Offline-first infligh",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792116260485-7oan",
+      "timestamp": "2026-10-16T02:04:20.485Z",
+      "timeFormatted": "02:04:20",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"airline tech and ground operations\" across 13 venue attendees",
+      "latencyMs": 578,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Marcus Vance (86%): \"Directly addresses \"airline tech and ground operations\" via Marcus Vance's work at Horizon Aero Ventures focusing on \"airline\", \"tech\", \"operations\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792116259893-7mj2",
+      "timestamp": "2026-10-16T02:04:19.893Z",
+      "timeFormatted": "02:04:19",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 320,
+      "model": "gemini-3.1-flash-lite-image (Static Fallback)",
+      "outputExcerpt": "Static Fallback Avatar: Tom Reyes / Male Fintech Lead (electric-blue #0066FF rim, cyan glow on dark #0B0B0E)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h55m40.114440653s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h55m40.114440653s."
+    },
+    {
+      "id": "log-1792116259589-wpfa",
+      "timestamp": "2026-10-16T02:04:19.589Z",
+      "timeFormatted": "02:04:19",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 320,
+      "model": "gemini-3.1-flash-lite-image (Static Fallback)",
+      "outputExcerpt": "Static Fallback Avatar: Priya Shah / Female Executive Presence (electric-blue #0066FF rim, cyan glow on dark #0B0B0E)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h55m40.420172852s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h55m40.420172852s."
+    },
+    {
+      "id": "log-1792116230492-lae7",
+      "timestamp": "2026-10-16T02:03:50.492Z",
+      "timeFormatted": "02:03:50",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah's Agent (for Tom Reyes)",
+      "input": "[Tom Reyes]: \"Can you tell me about ANiX offline-first capabilities?\"",
+      "latencyMs": 560,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Priya Shah's representative at forthcode / ANiX Tech, I can confirm that our focus is \"Offline-first infligh",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792116229924-7xbp",
+      "timestamp": "2026-10-16T02:03:49.924Z",
+      "timeFormatted": "02:03:49",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"airline tech and ground operations\" across 13 venue attendees",
+      "latencyMs": 638,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Marcus Vance (86%): \"Directly addresses \"airline tech and ground operations\" via Marcus Vance's work at Horizon Aero Ventures focusing on \"airline\", \"tech\", \"operations\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792116229276-kn6v",
+      "timestamp": "2026-10-16T02:03:49.276Z",
+      "timeFormatted": "02:03:49",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 320,
+      "model": "gemini-3.1-flash-lite-image (Static Fallback)",
+      "outputExcerpt": "Static Fallback Avatar: Tom Reyes / Male Fintech Lead (electric-blue #0066FF rim, cyan glow on dark #0B0B0E)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h56m10.733071647s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h56m10.733071647s."
+    },
+    {
+      "id": "log-1792116229025-1get",
+      "timestamp": "2026-10-16T02:03:49.025Z",
+      "timeFormatted": "02:03:49",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 329,
+      "model": "gemini-3.1-flash-lite-image (Static Fallback)",
+      "outputExcerpt": "Static Fallback Avatar: Priya Shah / Female Executive Presence (electric-blue #0066FF rim, cyan glow on dark #0B0B0E)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h56m10.994405028s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h56m10.994405028s."
+    },
+    {
+      "id": "log-1792116189592-psmo",
+      "timestamp": "2026-10-16T02:03:09.592Z",
+      "timeFormatted": "02:03:09",
+      "feature": "Venue Discovery Search",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Search query: \"airline tech and ground operations\" across 13 venue attendees",
+      "latencyMs": 732,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Marcus Vance (86%): \"Directly addresses \"airline tech and ground operations\" via Marcus Vance's work at Horizon Aero Ventures focusing on \"airline\", \"tech\", \"operations\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792116188851-b3pa",
+      "timestamp": "2026-10-16T02:03:08.850Z",
+      "timeFormatted": "02:03:08",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h56m51.158597351s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h56m51.158597351s."
+    },
+    {
+      "id": "log-1792116188562-s6ze",
+      "timestamp": "2026-10-16T02:03:08.562Z",
+      "timeFormatted": "02:03:08",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h56m51.454934716s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 21h56m51.454934716s."
+    },
+    {
+      "id": "log-1792114311310-1kll",
+      "timestamp": "2026-10-16T01:31:51.310Z",
+      "timeFormatted": "01:31:51",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah's Agent (for Tom Reyes)",
+      "input": "[Tom Reyes]: \"Can ANiX run completely offline on an Airbus A350 cabin blade?\"",
+      "latencyMs": 548,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Priya Shah's representative at forthcode / ANiX Tech, I can confirm that our focus is \"Offline-first infligh",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792114310743-q83t",
+      "timestamp": "2026-10-16T01:31:50.743Z",
+      "timeFormatted": "01:31:50",
+      "feature": "Venue Discovery Search",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes",
+      "input": "Search query: \"offline passenger cabin AI\" across 13 venue attendees",
+      "latencyMs": 614,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Priya Shah (95%): \"Directly addresses \"offline passenger cabin AI\" via Priya Shah's work at forthcode / ANiX Tech focusing on \"offline\", \"passenger\", \"cabin\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792114310115-vi1j",
+      "timestamp": "2026-10-16T01:31:50.115Z",
+      "timeFormatted": "01:31:50",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 22h28m9.89294551s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 22h28m9.89294551s."
+    },
+    {
+      "id": "log-1792114309783-r9jg",
+      "timestamp": "2026-10-16T01:31:49.783Z",
+      "timeFormatted": "01:31:49",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 22h28m10.233166685s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 22h28m10.233166685s."
+    },
+    {
+      "id": "log-1792113356944-4bg2",
+      "timestamp": "2026-10-16T01:15:56.944Z",
+      "timeFormatted": "01:15:56",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah's Agent (for Tom Reyes)",
+      "input": "[Tom Reyes]: \"Hello, what does ANiX do?\"",
+      "latencyMs": 567,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Priya Shah's representative at forthcode / ANiX Tech, I can confirm that our focus is \"Offline-first infligh",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792113356357-f625",
+      "timestamp": "2026-10-16T01:15:56.357Z",
+      "timeFormatted": "01:15:56",
+      "feature": "Venue Discovery Search",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes",
+      "input": "Search query: \"IFE edge computing\" across 13 venue attendees",
+      "latencyMs": 670,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Priya Shah (83%): \"Directly addresses \"IFE edge computing\" via Priya Shah's work at forthcode / ANiX Tech focusing on \"ife\", \"edge\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792113355671-kszd",
+      "timestamp": "2026-10-16T01:15:55.671Z",
+      "timeFormatted": "01:15:55",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 22h44m4.336307861s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 22h44m4.336307861s."
+    },
+    {
+      "id": "log-1792113355396-78rz",
+      "timestamp": "2026-10-16T01:15:55.396Z",
+      "timeFormatted": "01:15:55",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 22h44m4.620928334s.",
+      "errorDetails": "HTTP 429 (RESOURCE_EXHAUSTED): You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-3.1-flash-lite-image\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-3.1-flash-lite-image\nPlease retry in 22h44m4.620928334s."
+    },
+    {
+      "id": "log-1792113347316-rd6g",
+      "timestamp": "2026-10-16T01:15:47.316Z",
+      "timeFormatted": "01:15:47",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah's Agent (for Tom Reyes)",
+      "input": "[Tom Reyes]: \"Hello, what does ANiX do?\"",
+      "latencyMs": 530,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Priya Shah's representative at forthcode / ANiX Tech, I can confirm that our focus is \"Offline-first infligh",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792113346779-ozpf",
+      "timestamp": "2026-10-16T01:15:46.779Z",
+      "timeFormatted": "01:15:46",
+      "feature": "Venue Discovery Search",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes",
+      "input": "Search query: \"IFE edge computing\" across 13 venue attendees",
+      "latencyMs": 506,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Priya Shah (83%): \"Directly addresses \"IFE edge computing\" via Priya Shah's work at forthcode / ANiX Tech focusing on \"ife\", \"edge\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792113346260-bztw",
+      "timestamp": "2026-10-16T01:15:46.260Z",
+      "timeFormatted": "01:15:46",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 8s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 8s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792113345995-u0ii",
+      "timestamp": "2026-10-16T01:15:45.995Z",
+      "timeFormatted": "01:15:45",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 8s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 8s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792113333377-irat",
+      "timestamp": "2026-10-16T01:15:33.377Z",
+      "timeFormatted": "01:15:33",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah's Agent (for Tom Reyes)",
+      "input": "[Tom Reyes]: \"Hello, what does ANiX do?\"",
+      "latencyMs": 589,
+      "model": "Deterministic Domain Engine",
+      "outputExcerpt": "Thank you for your question. As Priya Shah's representative at forthcode / ANiX Tech, I can confirm that our focus is \"Offline-first infligh",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792113332780-i8e2",
+      "timestamp": "2026-10-16T01:15:32.780Z",
+      "timeFormatted": "01:15:32",
+      "feature": "Venue Discovery Search",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes",
+      "input": "Search query: \"IFE edge computing\" across 13 venue attendees",
+      "latencyMs": 722,
+      "model": "Deterministic Keyword Engine",
+      "outputExcerpt": "#1 Priya Shah (83%): \"Directly addresses \"IFE edge computing\" via Priya Shah's work at forthcode / ANiX Tech focusing on \"ife\", \"edge\".\"",
+      "status": "fallback",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 5s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 5s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792113332042-kj0t",
+      "timestamp": "2026-10-16T01:15:32.042Z",
+      "timeFormatted": "01:15:32",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #2) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 8s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 8s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792113331753-sbmk",
+      "timestamp": "2026-10-16T01:15:31.753Z",
+      "timeFormatted": "01:15:31",
+      "feature": "Avatar Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Photo uploaded for Priya Shah (Variation #1) - Brand style: shoulder-up, electric-blue rim, cyan glow, dark bg",
+      "latencyMs": 360,
+      "model": "gemini-3.1-flash-lite-image",
+      "outputExcerpt": "HoloMeet Digital Presence Styler applied (quota fallback)",
+      "status": "fallback",
+      "attempts": 1,
+      "retryCount": 0,
+      "retryReason": "HTTP 400 INVALID_ARGUMENT: Manually set deadline 8s is too short. Minimum allowed deadline is 10s.",
+      "errorDetails": "HTTP 400 (INVALID_ARGUMENT): Manually set deadline 8s is too short. Minimum allowed deadline is 10s."
+    },
+    {
+      "id": "log-1792066414851-2k29",
+      "timestamp": "2026-10-15T12:13:34.851Z",
+      "timeFormatted": "12:13:34",
+      "feature": "Profile Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Presence prompt: Priya Shah (Founder & CEO at ForthCode) - \"Building ANiX and DAViX offline AI software for airline passenger cabins and ground turnarounds.\"",
+      "latencyMs": 66096,
+      "model": "gemini-3.8-flash",
+      "outputExcerpt": "Empowering aviation with offline edge AI for intelligent passenger cabins and faster ground turnarounds.",
+      "status": "success",
+      "attempts": 3,
+      "retryCount": 2,
+      "retryReason": "HTTP 503 Service Unavailable: This model is currently experiencing high demand.",
+      "errorDetails": "HTTP 503 UNAVAILABLE (Spike in demand caused 2 silent SDK retries with exponential backoff before succeeding on 3rd attempt)"
+    },
+    {
+      "id": "log-1792066359471-s8ia",
+      "timestamp": "2026-10-15T12:12:39.471Z",
+      "timeFormatted": "12:12:39",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah's Agent (for Tom Reyes)",
+      "input": "[Tom Reyes]: \"Can you explain how ANiX handles offline passenger requests?\"",
+      "latencyMs": 420173,
+      "model": "gemini-3.8-flash",
+      "outputExcerpt": "Hello Tom. ANiX operates locally on edge aircraft IFE servers using high-speed, offline LLMs. It processes passenger queries—such as meal ch",
+      "status": "success",
+      "attempts": 5,
+      "retryCount": 4,
+      "retryReason": "HTTP 503 UNAVAILABLE & HTTP 429 Rate Limit",
+      "errorDetails": "Silent SDK exponential backoff (p-retry with up to 60s delays across 5 attempts until final 200 OK passed through)"
+    },
+    {
+      "id": "log-1792066308461-94bs",
+      "timestamp": "2026-10-15T12:11:48.461Z",
+      "timeFormatted": "12:11:48",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah's Agent (for Tom Reyes)",
+      "input": "[Tom Reyes]: \"Can you explain how ANiX handles offline passenger requests?\"",
+      "latencyMs": 2337,
+      "model": "gemini-3.1-flash-lite",
+      "outputExcerpt": "Hello, Tom. Good to meet you.\n\nANiX eliminates satellite dependency by running high-speed, quantized LLMs directly on the aircraft’s onboard",
+      "status": "success",
+      "attempts": 2,
+      "retryCount": 1,
+      "retryReason": "gemini-3.8-flash returned HTTP 503 (High Demand). Auto-promoted to gemini-3.1-flash-lite",
+      "errorDetails": "Fast promotion to flash-lite completed in 2.3s"
+    },
+    {
+      "id": "log-1792065925269-qutv",
+      "timestamp": "2026-10-15T12:05:25.269Z",
+      "timeFormatted": "12:05:25",
+      "feature": "Venue Discovery Search",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes",
+      "input": "Search query: \"IFE edge computing\" across 13 venue attendees",
+      "latencyMs": 214707,
+      "model": "gemini-3.8-flash",
+      "outputExcerpt": "#1 Siddharth Nair (97%): \"Directly engineers certified cabin edge hardware with the BladeServer-IX Edge Box, featuring DO-160 compliant onboard Linux server blades and neural accelerators dedicated to powering seatback IFE AI workloads.\"",
+      "status": "success",
+      "attempts": 4,
+      "retryCount": 3,
+      "retryReason": "HTTP 503 Service Unavailable: High demand spike on gemini-3.8-flash",
+      "errorDetails": "HTTP 503 UNAVAILABLE (Model experiencing high demand; silent SDK backoff retry attempts 1-3 delayed final response)"
+    },
+    {
+      "id": "log-seed-1",
+      "timestamp": "2026-10-15T11:49:38.310Z",
+      "timeFormatted": "11:49:38",
+      "feature": "Matchmaking Transcript",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Autonomous synergy match analysis between Priya Shah (ForthCode) and Tom Reyes (SkyHorizon)",
+      "latencyMs": 1420,
+      "model": "gemini-3.8-flash",
+      "outputExcerpt": "Tom has an active fleet pilot requirement for 40 A350s directly matching Priya's ANiX offline cabin AI.",
+      "status": "success"
+    },
+    {
+      "id": "log-seed-2",
+      "timestamp": "2026-10-15T11:53:38.310Z",
+      "timeFormatted": "11:53:38",
+      "feature": "Venue Discovery Search",
+      "personaId": "tom-reyes",
+      "personaName": "Tom Reyes",
+      "input": "AI for airline passenger cabin without satellite internet",
+      "latencyMs": 1680,
+      "model": "gemini-3.8-flash",
+      "outputExcerpt": "Priya Shah ranked #1 (98% match). Directly addresses offline IFE via ANiX edge engine.",
+      "status": "success"
+    },
+    {
+      "id": "log-seed-3",
+      "timestamp": "2026-10-15T11:56:38.310Z",
+      "timeFormatted": "11:56:38",
+      "feature": "Agent Chat Reply",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Does ANiX operate without satellite connectivity?",
+      "latencyMs": 940,
+      "model": "gemini-3.8-flash",
+      "outputExcerpt": "Yes, exactly. ANiX is offline-first by design. It runs locally on certified aircraft server blades...",
+      "status": "success"
+    },
+    {
+      "id": "log-seed-4",
+      "timestamp": "2026-10-15T11:58:38.310Z",
+      "timeFormatted": "11:58:38",
+      "feature": "Profile Generation",
+      "personaId": "priya-shah",
+      "personaName": "Priya Shah",
+      "input": "Founder of ForthCode developing ANiX, DAViX, and nGO for airlines at Changi T3",
+      "latencyMs": 2150,
+      "model": "gemini-3.8-flash",
+      "outputExcerpt": "Empowering commercial aviation with offline-first cabin AI and ground operations intelligence.",
+      "status": "success"
+    },
+    {
+      "id": "log-seed-5",
+      "timestamp": "2026-10-15T12:00:38.310Z",
+      "timeFormatted": "12:00:38",
+      "feature": "Matchmaking Transcript",
+      "personaId": "marcus-vance",
+      "personaName": "Marcus Vance",
+      "input": "Autonomous synergy match analysis between Marcus Vance (Horizon Aero) and Priya Shah (ForthCode)",
+      "latencyMs": 1530,
+      "model": "gemini-3.8-flash",
+      "outputExcerpt": "Marcus deploys $1M-$4M seed checks into aviation enterprise software, aligning with ForthCode expansion.",
+      "status": "success"
+    }
+  ]
+}

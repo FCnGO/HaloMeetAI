@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en" class="light" data-theme="light" style="background-color: #E6E6E2; color: #16171A; color-scheme: light;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#E6E6E2" />
+    <meta name="color-scheme" content="light" />
+    <title>HoloMeet AI — Avatar Discovery Layer</title>
+    <meta name="description" content="An avatar discovery platform for physical spaces where attendees deploy Gemini-powered avatars to discover peers, negotiate introductions, and connect within user-defined permission rules." />
+    <meta property="og:title" content="HoloMeet AI — Avatar Discovery Layer" />
+    <meta property="og:description" content="An avatar discovery platform for physical spaces where attendees deploy Gemini-powered avatars to discover peers, negotiate introductions, and connect within user-defined permission rules." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      html, body, #root {
+        background-color: #E6E6E2 !important;
+        color: #16171A !important;
+        color-scheme: light !important;
+      }
+    </style>
+    <script>
+      (function() {
+        try {
+          localStorage.removeItem('holomeet_theme');
+          localStorage.removeItem('holomeet_theme_v2');
+          localStorage.setItem('holomeet_theme_v2', 'light');
+        } catch (e) {}
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.documentElement.style.backgroundColor = '#E6E6E2';
+        document.documentElement.style.colorScheme = 'light';
+        if (document.body) {
+          document.body.style.backgroundColor = '#E6E6E2';
+          document.body.style.color = '#16171A';
+        }
+      })();
+    </script>
+  </head>
+  <body class="bg-[#E6E6E2] text-[#16171A] antialiased selection:bg-[#16171A] selection:text-[#F6F6F3]" style="background-color: #E6E6E2; color: #16171A;">
+    <div id="root" style="background-color: #E6E6E2;"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

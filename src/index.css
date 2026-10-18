@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+/* Warm Light Theme as Standard across all selectors */
+:root {
+  color-scheme: light;
+  --app-bg: #E6E6E2;
+  --app-shell-bg: #E6E6E2;
+  --app-surface: #FFFFFF;
+  --app-surface-subtle: #F6F6F3;
+  --app-surface-elevated: #FFFFFF;
+  --app-border: #D8D8D3;
+  --app-border-subtle: #E2E2DC;
+  --app-text-primary: #16171A;
+  --app-text-secondary: #5A5C63;
+  --app-text-muted: #8E9097;
+  --app-primary: #16171A;
+  --app-primary-bg: #F6F6F3;
+  --app-header-bg: #E6E6E2;
+  --app-header-text: #16171A;
+  --app-header-border: #D8D8D3;
+  --app-nav-bg: rgba(255, 255, 255, 0.96);
+  --app-nav-border: #D8D8D3;
+  --app-card-bg: #FFFFFF;
+  --app-card-border: #D8D8D3;
+  --app-input-bg: #FFFFFF;
+  --app-input-border: #D8D8D3;
+  --app-code-bg: #F1F1ED;
+  --app-code-text: #16171A;
+  --app-code-border: #D8D8D3;
+}
+
+.light, [data-theme="light"] {
+  color-scheme: light;
+  --app-bg: #E6E6E2;
+  --app-shell-bg: #E6E6E2;
+  --app-surface: #FFFFFF;
+  --app-surface-subtle: #F6F6F3;
+  --app-surface-elevated: #FFFFFF;
+  --app-border: #D8D8D3;
+  --app-border-subtle: #E2E2DC;
+  --app-text-primary: #16171A;
+  --app-text-secondary: #5A5C63;
+  --app-text-muted: #8E9097;
+  --app-primary: #16171A;
+  --app-primary-bg: #F6F6F3;
+  --app-header-bg: #E6E6E2;
+  --app-header-text: #16171A;
+  --app-header-border: #D8D8D3;
+  --app-nav-bg: rgba(255, 255, 255, 0.96);
+  --app-nav-border: #D8D8D3;
+  --app-card-bg: #FFFFFF;
+  --app-card-border: #D8D8D3;
+  --app-input-bg: #FFFFFF;
+  --app-input-border: #D8D8D3;
+  --app-code-bg: #F1F1ED;
+  --app-code-text: #16171A;
+  --app-code-border: #D8D8D3;
+}
+
+.dark, [data-theme="dark"] {
+  color-scheme: dark;
+  --app-bg: #0B0B0E;
+  --app-shell-bg: #0B0B0E;
+  --app-surface: #17181D;
+  --app-surface-subtle: #1D1E24;
+  --app-surface-elevated: #1D1E24;
+  --app-border: #2B2C33;
+  --app-border-subtle: #24252B;
+  --app-text-primary: #F6F6F3;
+  --app-text-secondary: #B4B6BD;
+  --app-text-muted: #8E9097;
+  --app-primary: #5558E8;
+  --app-primary-bg: #1D1E24;
+  --app-header-bg: #0B0B0E;
+  --app-header-text: #F6F6F3;
+  --app-header-border: #2B2C33;
+  --app-nav-bg: rgba(23, 24, 29, 0.96);
+  --app-nav-border: #2B2C33;
+  --app-card-bg: #17181D;
+  --app-card-border: #2B2C33;
+  --app-input-bg: #17181D;
+  --app-input-border: #2B2C33;
+  --app-code-bg: #1D1E24;
+  --app-code-text: #F6F6F3;
+  --app-code-border: #2B2C33;
+}
+
+@theme {
+  --color-app-bg: var(--app-bg);
+  --color-app-shell-bg: var(--app-shell-bg);
+  --color-app-surface: var(--app-surface);
+  --color-app-surface-subtle: var(--app-surface-subtle);
+  --color-app-surface-elevated: var(--app-surface-elevated);
+  --color-app-border: var(--app-border);
+  --color-app-border-subtle: var(--app-border-subtle);
+  --color-app-text-primary: var(--app-text-primary);
+  --color-app-text-secondary: var(--app-text-secondary);
+  --color-app-text-muted: var(--app-text-muted);
+  --color-app-primary: var(--app-primary);
+  --color-app-primary-bg: var(--app-primary-bg);
+  --color-app-header-bg: var(--app-header-bg);
+  --color-app-header-text: var(--app-header-text);
+  --color-app-header-border: var(--app-header-border);
+  --color-app-nav-bg: var(--app-nav-bg);
+  --color-app-nav-border: var(--app-nav-border);
+  --color-app-card-bg: var(--app-card-bg);
+  --color-app-card-border: var(--app-card-border);
+  --color-app-input-bg: var(--app-input-bg);
+  --color-app-input-border: var(--app-input-border);
+  --color-app-code-bg: var(--app-code-bg);
+  --color-app-code-text: var(--app-code-text);
+  --color-app-code-border: var(--app-code-border);
+}
+
+@layer base {
+  html, body, #root {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: clip;
+    margin: 0;
+    padding: 0;
+    background-color: #E6E6E2 !important;
+  }
+
+  body {
+    background-color: #E6E6E2 !important;
+    color: #16171A;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+/* Primary Pill Button Utility */
+.btn-primary-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #16171A;
+  color: #F6F6F3;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.8125rem;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn-primary-pill:hover:not(:disabled) {
+  background-color: #26282E;
+  transform: translateY(-0.5px);
+}
+.btn-primary-pill:active:not(:disabled) {
+  transform: scale(0.99);
+}
+.btn-primary-pill:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Secondary Outline Button Utility */
+.btn-secondary-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  color: #16171A;
+  border: 1px solid #D8D8D3;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+.btn-secondary-pill:hover:not(:disabled) {
+  background-color: #F6F6F3;
+  border-color: #C8C8C2;
+}
+.btn-secondary-pill:active:not(:disabled) {
+  transform: scale(0.99);
+}
+.btn-secondary-pill:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+}
+
+/* Soft status dot */
+.status-dot-active {
+  background-color: #10B981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+/* Subtle clean card style */
+.clean-card {
+  background-color: #FFFFFF;
+  border: 1px solid #D8D8D3;
+  border-radius: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Radar sweep continuous rotation */
+@keyframes radar-sweep {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.animate-radar-sweep {
+  animation: radar-sweep 4s linear infinite;
+}
+
+@keyframes radar-pulse {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 1;
+  }
+}
+
+.animate-radar-pulse {
+  animation: radar-pulse 3s ease-in-out infinite;
+}
+
+/* ============================================================
+   Dark Theme Overrides
+   The app is built with literal Tailwind arbitrary-value color
+   utilities (bg-[#...], text-[#...], border-[#...]) rather than
+   the themed --app-* custom properties above, so dark mode is
+   applied as a global attribute-scoped override of those exact
+   utility classes rather than a per-component rewrite.
+   ============================================================ */
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+[data-theme="dark"] body {
+  background-color: #0B0B0E !important;
+  color: #F6F6F3;
+}
+
+/* Shared component classes */
+[data-theme="dark"] .clean-card {
+  background-color: #17181D;
+  border-color: #2B2C33;
+}
+[data-theme="dark"] .btn-primary-pill {
+  background-color: #5558E8;
+  color: #FFFFFF;
+}
+[data-theme="dark"] .btn-primary-pill:hover:not(:disabled) {
+  background-color: #6A6DF0;
+}
+[data-theme="dark"] .btn-secondary-pill {
+  background-color: #17181D;
+  color: #F6F6F3;
+  border-color: #2B2C33;
+}
+[data-theme="dark"] .btn-secondary-pill:hover:not(:disabled) {
+  background-color: #1D1E24;
+  border-color: #33353C;
+}
+
+/* Surfaces */
+[data-theme="dark"] .bg-white { background-color: #17181D; }
+[data-theme="dark"] .bg-\[\#F6F6F3\] { background-color: #1D1E24; }
+[data-theme="dark"] .bg-\[\#FBFBFA\] { background-color: #1D1E24; }
+[data-theme="dark"] .bg-\[\#E6E6E2\] { background-color: #0B0B0E; }
+[data-theme="dark"] .bg-\[\#16171A\] { background-color: #5558E8; }
+[data-theme="dark"] .bg-\[\#26282E\] { background-color: #33353C; }
+[data-theme="dark"] .bg-\[\#D8D8D3\] { background-color: #2B2C33; }
+[data-theme="dark"] .bg-\[\#E2E2DC\] { background-color: #24252B; }
+[data-theme="dark"] .bg-\[\#DCFCE7\] { background-color: #0F2A1C; }
+[data-theme="dark"] .bg-\[\#EEF0FD\] { background-color: #1E2240; }
+[data-theme="dark"] .bg-\[\#E0F2FE\] { background-color: #0E2433; }
+[data-theme="dark"] .bg-\[\#FEF3C7\] { background-color: #2E2410; }
+[data-theme="dark"] .bg-\[\#F3E8FF\] { background-color: #241530; }
+[data-theme="dark"] .bg-\[\#FFF1F2\] { background-color: #2B121A; }
+[data-theme="dark"] .bg-\[\#FFFFFF\]\/95 { background-color: rgba(23, 24, 29, 0.95); }
+[data-theme="dark"] .bg-\[\#E2E2DC\]\/80 { background-color: rgba(43, 44, 51, 0.8); }
+[data-theme="dark"] .bg-white\/90 { background-color: rgba(23, 24, 29, 0.9); }
+
+/* Text */
+[data-theme="dark"] .text-\[\#16171A\] { color: #F6F6F3; }
+[data-theme="dark"] .text-\[\#0F172A\] { color: #F6F6F3; }
+[data-theme="dark"] .text-\[\#8E9097\] { color: #9A9CA3; }
+[data-theme="dark"] .text-\[\#5A5C63\] { color: #B4B6BD; }
+[data-theme="dark"] .text-\[\#166534\] { color: #4ADE80; }
+[data-theme="dark"] .text-\[\#5558E8\] { color: #818CF8; }
+[data-theme="dark"] .text-\[\#0369A1\] { color: #38BDF8; }
+[data-theme="dark"] .text-\[\#92400E\] { color: #FBBF24; }
+[data-theme="dark"] .text-\[\#6B21A8\] { color: #C084FC; }
+[data-theme="dark"] .text-\[\#9F1239\] { color: #FB7185; }
+[data-theme="dark"] .text-\[\#115E59\] { color: #2DD4BF; }
+[data-theme="dark"] .text-\[\#D8D8D3\] { color: #2B2C33; }
+
+/* Borders */
+[data-theme="dark"] .border-\[\#D8D8D3\] { border-color: #2B2C33; }
+[data-theme="dark"] .border-\[\#E2E2DC\] { border-color: #24252B; }
+[data-theme="dark"] .border-\[\#16171A\] { border-color: #5558E8; }
+[data-theme="dark"] .border-white { border-color: #17181D; }
+[data-theme="dark"] .border-\[\#BBF7D0\] { border-color: #14532D; }
+[data-theme="dark"] .border-\[\#BAE6FD\] { border-color: #075985; }
+[data-theme="dark"] .border-\[\#FDE68A\] { border-color: #78350F; }
+[data-theme="dark"] .border-\[\#E9D5FF\] { border-color: #581C87; }
+[data-theme="dark"] .border-\[\#FECDD3\] { border-color: #881337; }
+
+/* Inputs & misc surfaces that default to white in light mode */
+[data-theme="dark"] input,
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: #17181D;
+  color: #F6F6F3;
+}
