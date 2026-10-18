@@ -36,9 +36,22 @@ export const ProfileStudio: React.FC<ProfileStudioProps> = ({
   onProfileUpdated,
   isDarkMode,
   onToggleDarkMode,
+  onResetDemo,
   onOpenActivityLog,
   onLogout
 }) => {
+  const [isResetting, setIsResetting] = useState(false);
+
+  const handleResetPrototype = async () => {
+    if (!onResetDemo) return;
+    if (!window.confirm('Reset the prototype? This restores all attendees, chats and matches to the original demo seed data.')) return;
+    setIsResetting(true);
+    try {
+      await onResetDemo();
+    } finally {
+      setIsResetting(false);
+    }
+  };
   const [formData, setFormData] = useState<UserProfile>(currentPersona);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
@@ -684,6 +697,17 @@ export const ProfileStudio: React.FC<ProfileStudioProps> = ({
           className="w-full text-center text-sm text-rose-600 font-medium py-2 cursor-pointer"
         >
           Log out
+        </button>
+      )}
+
+      {onResetDemo && (
+        <button
+          type="button"
+          onClick={handleResetPrototype}
+          disabled={isResetting}
+          className="w-full text-center text-xs text-[#8E9097] font-medium py-2 cursor-pointer disabled:opacity-60"
+        >
+          {isResetting ? 'Resetting...' : 'Reset prototype'}
         </button>
       )}
 
