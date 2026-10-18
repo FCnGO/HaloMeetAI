@@ -43,6 +43,7 @@ interface MatchmakingViewProps {
   isLoading: boolean;
   matchmakingError: string | null;
   onRunMatchmaking: (force?: boolean) => Promise<void>;
+  onOpenChatWithProfile?: (profile: UserProfile, initialTab?: 'agent' | 'person') => void;
 }
 
 export const MatchmakingView: React.FC<MatchmakingViewProps> = ({
@@ -54,10 +55,12 @@ export const MatchmakingView: React.FC<MatchmakingViewProps> = ({
   isCached,
   isLoading,
   matchmakingError,
-  onRunMatchmaking: handleRunMatchmaking
+  onRunMatchmaking: handleRunMatchmaking,
+  onOpenChatWithProfile
 }) => {
   const [showFullTranscript, setShowFullTranscript] = useState(true);
   const [starFilter, setStarFilter] = useState<'all' | '5' | '4plus'>('all');
+  const [requestingSecondaryId, setRequestingSecondaryId] = useState<string | null>(null);
   const [introError, setIntroError] = useState<string | null>(null);
 
   const filteredMatches = (matchResult?.matches || []).filter(
@@ -92,6 +95,17 @@ export const MatchmakingView: React.FC<MatchmakingViewProps> = ({
     } catch (err: any) {
       console.error('Failed to request intro:', err);
       setIntroError(err?.message || 'Failed to request introduction. Please retry.');
+    }
+  };
+
+  const handleRequestIntroForSecondary = async (profileId: string, synergyReason: string) => {
+    setRequestingSecondaryId(profileId);
+    try {
+      await onRequestIntroduction(profileId, `Autonomous Avatar Match: ${synergyReason}`);
+    } catch (err: any) {
+      console.error('Failed to request intro:', err);
+    } finally {
+      setRequestingSecondaryId(null);
     }
   };
 
@@ -344,12 +358,22 @@ export const MatchmakingView: React.FC<MatchmakingViewProps> = ({
               </div>
             )}
 
-            {visibleSecondaryMatches.map((m) => (
+            {visibleSecondaryMatches.map((m) => {
+              const hasOppWithThem = existingOpportunities.some(
+                o => (o.senderId === currentPersona.id && o.receiverId === m.profile.id) ||
+                     (o.senderId === m.profile.id && o.receiverId === currentPersona.id)
+              );
+              const isRequesting = requestingSecondaryId === m.profile.id;
+              return (
               <div
                 key={m.profile.id}
                 className="clean-card p-4 space-y-2.5"
               >
-                <div className="flex items-start justify-between gap-2">
+                <button
+                  type="button"
+                  onClick={() => onOpenChatWithProfile?.(m.profile, 'agent')}
+                  className="w-full flex items-start justify-between gap-2 text-left cursor-pointer"
+                >
                   <div className="flex items-center gap-3">
                     <img
                       src={m.profile.avatar}
@@ -373,7 +397,7 @@ export const MatchmakingView: React.FC<MatchmakingViewProps> = ({
                     </span>
                     <StarRating score={m.synergyScore} size="w-2.5 h-2.5" />
                   </div>
-                </div>
+                </button>
 
                 <p className="text-xs text-[#5A5C63] leading-relaxed">
                   {m.synergyReason}
@@ -396,8 +420,27 @@ export const MatchmakingView: React.FC<MatchmakingViewProps> = ({
                   <span>📍 {m.profile.zone}</span>
                   <span>{m.profile.availabilityMinutes}m window</span>
                 </div>
+
+                <div className="grid grid-cols-2 gap-2 pt-0.5">
+                  <button
+                    type="button"
+                    onClick={() => onOpenChatWithProfile?.(m.profile, 'person')}
+                    className="btn-secondary-pill h-9 w-full text-xs font-semibold"
+                  >
+                    <span>Message</span>
+                  </button>
+                  <button
+                    type="button"
+                    disabled={isRequesting || hasOppWithThem}
+                    onClick={() => handleRequestIntroForSecondary(m.profile.id, m.synergyReason)}
+                    className="btn-primary-pill h-9 w-full text-xs font-semibold disabled:opacity-60"
+                  >
+                    <span>{hasOppWithThem ? 'Requested' : isRequesting ? 'Sending...' : 'Request intro'}</span>
+                  </button>
+                </div>
               </div>
-            ))}
+              );
+            })}
           </div>
 
         </div>

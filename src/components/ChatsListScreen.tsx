@@ -13,6 +13,7 @@ interface ChatsListScreenProps {
   onNavigateToDiscovery: () => void;
   onApproveOpportunity: (oppId: string) => Promise<void>;
   onDeclineOpportunity: (oppId: string) => Promise<void>;
+  onRequestIntroduction?: (targetProfileId: string, initialNote: string, conversationId?: string) => Promise<void>;
 }
 
 const StarRating: React.FC<{ score: number }> = ({ score }) => {
@@ -45,10 +46,13 @@ export const ChatsListScreen: React.FC<ChatsListScreenProps> = ({
   onOpenChat,
   onNavigateToDiscovery,
   onApproveOpportunity,
-  onDeclineOpportunity
+  onDeclineOpportunity,
+  onRequestIntroduction
 }) => {
   const [subTab, setSubTab] = useState<'messages' | 'requests'>('messages');
   const [processingId, setProcessingId] = useState<string | null>(null);
+  const [selectedTranscript, setSelectedTranscript] = useState<ConversationRecord | null>(null);
+  const [isRequestingIntro, setIsRequestingIntro] = useState(false);
 
   const personKeyPrefix = `${currentPersona.id}:`;
   const peopleThreads = Object.entries(personConversations)
@@ -62,16 +66,27 @@ export const ChatsListScreen: React.FC<ChatsListScreenProps> = ({
     .filter((x): x is { profile: UserProfile; lastMsg: PersonMessage } => x !== null)
     .sort((a, b) => b.lastMsg.timestamp.localeCompare(a.lastMsg.timestamp));
 
+  const matchScoreById: Record<string, number> = {};
+  (matchmakingResult?.matches || []).forEach(m => {
+    matchScoreById[m.profile.id] = m.synergyScore;
+  });
+
   const agentThreads = conversations
-    .filter(c => c.kind === 'visitor_chat' && (c.participantAId === currentPersona.id || c.participantBId === currentPersona.id))
+    .filter(c => (c.kind === 'visitor_chat' || c.kind === 'agent_match') && (c.participantAId === currentPersona.id || c.participantBId === currentPersona.id))
     .map(c => {
       const counterpartyId = c.participantAId === currentPersona.id ? c.participantBId : c.participantAId;
       const profile = allProfiles.find(p => p.id === counterpartyId);
       const lastMsg = c.messages[c.messages.length - 1];
-      return profile && lastMsg ? { profile, lastMsg, conv: c } : null;
+      return profile && lastMsg ? { profile, lastMsg, conv: c, score: matchScoreById[counterpartyId] } : null;
     })
-    .filter((x): x is { profile: UserProfile; lastMsg: ConversationRecord['messages'][number]; conv: ConversationRecord } => x !== null)
-    .sort((a, b) => new Date(b.conv.generatedAt).getTime() - new Date(a.conv.generatedAt).getTime());
+    .filter((x): x is { profile: UserProfile; lastMsg: ConversationRecord['messages'][number]; conv: ConversationRecord; score: number } => x !== null)
+    .sort((a, b) => {
+      // Best avatar-to-avatar match surfaces first; everything else falls back to recency.
+      const scoreA = a.conv.kind === 'agent_match' ? (a.score ?? -1) : -1;
+      const scoreB = b.conv.kind === 'agent_match' ? (b.score ?? -1) : -1;
+      if (scoreA !== scoreB) return scoreB - scoreA;
+      return new Date(b.conv.generatedAt).getTime() - new Date(a.conv.generatedAt).getTime();
+    });
 
   const pendingRequests = opportunities
     .filter(o => o.receiverId === currentPersona.id && !o.receiverApproved && o.status !== 'declined')
@@ -97,6 +112,17 @@ export const ChatsListScreen: React.FC<ChatsListScreenProps> = ({
       await onDeclineOpportunity(oppId);
     } finally {
       setProcessingId(null);
+    }
+  };
+
+  const handleRequestIntroFromTranscript = async (counterpartyId: string, note: string, conversationId?: string) => {
+    if (!onRequestIntroduction) return;
+    setIsRequestingIntro(true);
+    try {
+      await onRequestIntroduction(counterpartyId, note, conversationId);
+      setSelectedTranscript(null);
+    } finally {
+      setIsRequestingIntro(false);
     }
   };
 
@@ -183,14 +209,16 @@ export const ChatsListScreen: React.FC<ChatsListScreenProps> = ({
               </div>
             ) : (
               <div className="space-y-2">
-                {agentThreads.map(({ profile, lastMsg }) => {
+                {agentThreads.map(({ profile, lastMsg, conv, score }, idx) => {
                   const pastel = getPastelTheme(profile.id);
+                  const isMatch = conv.kind === 'agent_match';
+                  const isTopMatch = isMatch && idx === 0 && typeof score === 'number';
                   return (
                     <button
-                      key={profile.id}
+                      key={conv.id}
                       type="button"
-                      onClick={() => onOpenChat(profile, 'agent')}
-                      className="clean-card w-full p-3 flex items-center gap-3 text-left cursor-pointer hover:border-[#16171A] transition-colors"
+                      onClick={() => isMatch ? setSelectedTranscript(conv) : onOpenChat(profile, 'agent')}
+                      className={`clean-card w-full p-3 flex items-center gap-3 text-left cursor-pointer hover:border-[#16171A] transition-colors ${isTopMatch ? 'ring-1 ring-[#5558E8]' : ''}`}
                     >
                       <div className="relative shrink-0">
                         <img
@@ -205,10 +233,18 @@ export const ChatsListScreen: React.FC<ChatsListScreenProps> = ({
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center justify-between gap-2">
-                          <span className="font-semibold text-[15px] text-[#16171A] truncate">{profile.name}'s avatar</span>
-                          <span className="text-[11px] text-[#8E9097] shrink-0">AI avatar</span>
+                          <span className="font-semibold text-[15px] text-[#16171A] truncate">
+                            {isMatch ? `My avatar ↔ ${profile.name}'s avatar` : `${profile.name}'s avatar`}
+                          </span>
+                          {isMatch && typeof score === 'number' ? (
+                            <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full shrink-0 ${isTopMatch ? 'bg-[#5558E8] text-white' : 'bg-[#EEF0FD] text-[#5558E8]'}`}>
+                              {isTopMatch ? `#1 · ${score}%` : `${score}%`}
+                            </span>
+                          ) : (
+                            <span className="text-[11px] text-[#8E9097] shrink-0">{isMatch ? 'Autonomous match' : 'AI avatar'}</span>
+                          )}
                         </div>
-                        <p className="text-[13px] text-[#8E9097] truncate">{lastMsg.text}</p>
+                        <p className="text-[13px] text-[#8E9097] truncate">{conv.summary || lastMsg.text}</p>
                       </div>
                     </button>
                   );
@@ -282,6 +318,89 @@ export const ChatsListScreen: React.FC<ChatsListScreenProps> = ({
           )}
         </div>
       )}
+
+      {selectedTranscript && (() => {
+        const conv = selectedTranscript;
+        const counterpartyId = conv.participantAId === currentPersona.id ? conv.participantBId : conv.participantAId;
+        const counterparty = allProfiles.find(p => p.id === counterpartyId);
+        if (!counterparty) return null;
+        const pastel = getPastelTheme(counterparty.id);
+        const score = matchScoreById[counterparty.id];
+        const alreadyRequested = opportunities.some(o => o.conversationId === conv.id);
+        return (
+          <div className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4 animate-fade-in">
+            <div className="bg-white border-t sm:border border-[#D8D8D3] rounded-t-3xl sm:rounded-3xl max-w-[430px] w-full p-5 shadow-2xl relative max-h-[85vh] flex flex-col space-y-3.5">
+              <div className="flex items-center justify-between pb-3 border-b border-[#E2E2DC]">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <img
+                    src={counterparty.avatar}
+                    alt={counterparty.name}
+                    className="w-9 h-9 rounded-full object-cover ring-2 shrink-0"
+                    style={{ borderColor: pastel.border }}
+                  />
+                  <div className="min-w-0">
+                    <span className="font-semibold text-sm text-[#16171A] block truncate">
+                      My avatar ↔ {counterparty.name}'s avatar
+                    </span>
+                    <span className="text-[11px] text-[#8E9097]">
+                      {typeof score === 'number' ? `${score}% synergy · ` : ''}{conv.messages.length} turns
+                    </span>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedTranscript(null)}
+                  className="w-8 h-8 rounded-full bg-[#F6F6F3] flex items-center justify-center text-[#5A5C63] hover:text-[#16171A] cursor-pointer shrink-0"
+                >
+                  <span className="text-lg leading-none">&times;</span>
+                </button>
+              </div>
+
+              <div className="flex-1 overflow-y-auto space-y-3 min-h-0">
+                {conv.messages.map((msg) => {
+                  const isMyConv = conv.participantAId === currentPersona.id;
+                  const isMine = isMyConv ? msg.role === 'agent_a' : msg.role === 'agent_b';
+                  return (
+                    <div key={msg.id} className={`flex flex-col ${isMine ? 'items-start' : 'items-end'}`}>
+                      <span className="text-[10px] text-[#8E9097] font-medium mb-0.5 px-1">{msg.senderName}</span>
+                      <div className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-[13px] leading-relaxed ${
+                        isMine ? 'bg-[#F6F6F3] text-[#16171A] rounded-tl-sm' : 'bg-[#5558E8] text-white rounded-tr-sm'
+                      }`}>
+                        {msg.text}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              <div className="pt-1 space-y-2">
+                {alreadyRequested ? (
+                  <div className="text-xs text-center text-[#8E9097] py-1.5">Introduction already requested</div>
+                ) : (
+                  <button
+                    type="button"
+                    disabled={isRequestingIntro || !onRequestIntroduction}
+                    onClick={() => handleRequestIntroFromTranscript(counterparty.id, conv.summary || conv.messages[conv.messages.length - 1]?.text || '', conv.id)}
+                    className="btn-primary-pill w-full h-11 text-sm font-semibold shadow-xs disabled:opacity-60"
+                  >
+                    <span>{isRequestingIntro ? 'Sending...' : 'Request introduction'}</span>
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSelectedTranscript(null);
+                    onOpenChat(counterparty, 'person');
+                  }}
+                  className="btn-secondary-pill w-full h-11 text-sm font-semibold"
+                >
+                  <span>Message {counterparty.name.split(' ')[0]} directly</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        );
+      })()}
     </div>
   );
 };

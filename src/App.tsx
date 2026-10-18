@@ -405,6 +405,7 @@ export default function App() {
               isLoading={matchmakingLoading}
               matchmakingError={matchmakingError}
               onRunMatchmaking={handleRunMatchmaking}
+              onOpenChatWithProfile={handleOpenChatWithProfile}
             />
           )}
 
@@ -434,6 +435,7 @@ export default function App() {
                 onNavigateToDiscovery={() => setActiveTab('discovery')}
                 onApproveOpportunity={handleApproveOpportunity}
                 onDeclineOpportunity={handleDeclineOpportunity}
+                onRequestIntroduction={handleRequestIntroduction}
               />
             )
           )}
