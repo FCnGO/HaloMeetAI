@@ -655,6 +655,246 @@
         "shareContactAfterApproval": true,
         "showPresence": true
       }
+    },
+    {
+      "id": "elena-petrova",
+      "name": "Elena Petrova",
+      "role": "Head of Crew Technology",
+      "company": "AeroRoster",
+      "avatar": "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "SilverKris Lounge",
+      "availabilityMinutes": 80,
+      "availableUntil": "2026-10-14T03:30:00.000Z",
+      "objective": "sell_products",
+      "rawDescription": "AI-driven crew scheduling and fatigue-risk prediction software helping airlines cut roster disruptions and stay compliant with duty-time regulations.",
+      "contactInfo": {
+        "email": "elena.petrova@aeroroster.io",
+        "linkedin": "linkedin.com/in/elena-petrova-crewtech"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Predictive crew rostering and fatigue-risk AI that keeps airline crews legal, rested, and disruption-free.",
+        "elevatorPitch": "Representing Elena Petrova at AeroRoster. We predict fatigue risk and optimize crew rosters in real time, cutting last-minute reassignments and duty-time violations.",
+        "products": [
+          {
+            "id": "aeroroster-fatigueguard",
+            "title": "FatigueGuard — Predictive Crew Rostering",
+            "description": "Real-time fatigue-risk scoring and automated re-rostering engine that syncs with airline crew ops and ground turnaround systems.",
+            "suggestedQuestions": [
+              "How does FatigueGuard integrate with ground turnaround data like nGO?",
+              "What regulatory duty-time frameworks does it support?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Crew fatigue modeling",
+          "Roster optimization",
+          "Duty-time compliance"
+        ],
+        "disallowedTopics": [
+          "Internal crew personnel data",
+          "Unapproved pricing"
+        ],
+        "tone": "Precise, operationally focused, safety-first"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "omar-haddad",
+      "name": "Omar Haddad",
+      "role": "Founder & CEO",
+      "company": "BagTrack Robotics",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Jewel Connector Plaza",
+      "availabilityMinutes": 70,
+      "availableUntil": "2026-10-14T03:30:00.000Z",
+      "objective": "sell_products",
+      "rawDescription": "Computer-vision baggage tracking that cuts mishandling rates across ground handling and transfer belts, deployed at 9 major hub airports.",
+      "contactInfo": {
+        "email": "omar@bagtrackrobotics.com",
+        "linkedin": "linkedin.com/in/omar-haddad-bagtrack"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Computer-vision baggage tracking that slashes mishandling rates at transfer hubs.",
+        "elevatorPitch": "I'm Omar Haddad's agent at BagTrack Robotics. We use CV and edge inference on existing airport cameras to track every bag through transfer, cutting mishandling claims.",
+        "products": [
+          {
+            "id": "bagtrack-vision",
+            "title": "BagTrack Vision",
+            "description": "Camera-based real-time baggage identification and transfer tracking, no RFID retrofit required.",
+            "suggestedQuestions": [
+              "Does BagTrack Vision require new hardware or work with existing CCTV?",
+              "What mishandling reduction have your airport deployments seen?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Baggage tracking accuracy",
+          "Ground handling integration",
+          "Transfer hub deployments"
+        ],
+        "disallowedTopics": [
+          "Customer airline contracts",
+          "Unapproved pricing"
+        ],
+        "tone": "Direct, founder-energy, metrics-driven"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "sophia-reyes-lim",
+      "name": "Sophia Reyes-Lim",
+      "role": "VP Loyalty & Digital Payments",
+      "company": "Nimbus Pay",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Crystal Garden Concourse",
+      "availabilityMinutes": 55,
+      "availableUntil": "2026-10-14T03:30:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "Contactless inflight and airport payment infrastructure with AI-personalized loyalty offers, looking for distribution partners across cabin and lounge touchpoints.",
+      "contactInfo": {
+        "email": "sophia@nimbuspay.io",
+        "linkedin": "linkedin.com/in/sophia-reyes-lim"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Tap-to-pay and AI-personalized loyalty engine for inflight and lounge commerce.",
+        "elevatorPitch": "I represent Sophia Reyes-Lim at Nimbus Pay. We power contactless payments and real-time personalized loyalty offers across cabin and lounge touchpoints.",
+        "products": [
+          {
+            "id": "nimbus-wallet",
+            "title": "Nimbus Wallet",
+            "description": "Tap-to-pay and loyalty personalization engine embeddable in airline apps and seatback IFE.",
+            "suggestedQuestions": [
+              "Can Nimbus Wallet integrate with seatback IFE systems?",
+              "How is loyalty personalization modeled per passenger?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Payments integration",
+          "Loyalty personalization",
+          "IFE partnerships"
+        ],
+        "disallowedTopics": [
+          "Transaction-level customer data",
+          "Unapproved commercial terms"
+        ],
+        "tone": "Polished, commercially sharp, partnership-oriented"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "hana-yamada",
+      "name": "Dr. Hana Yamada",
+      "role": "Director of Sustainable Aviation",
+      "company": "GreenSky Fuels",
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Gate B1-B10 Wing",
+      "availabilityMinutes": 90,
+      "availableUntil": "2026-10-14T03:30:00.000Z",
+      "objective": "find_partners",
+      "rawDescription": "Sustainable aviation fuel (SAF) supply chain optimization using AI to model blending ratios, sourcing, and carbon accounting for airline sustainability targets.",
+      "contactInfo": {
+        "email": "hana.yamada@greenskyfuels.com",
+        "linkedin": "linkedin.com/in/hana-yamada-saf"
+      },
+      "agentSpec": {
+        "oneLinePitch": "AI-optimized SAF sourcing and blending to help airlines hit carbon targets without route disruption.",
+        "elevatorPitch": "I'm Dr. Hana Yamada's agent at GreenSky Fuels. We optimize sustainable aviation fuel blending and sourcing with AI, helping airlines meet carbon targets cost-effectively.",
+        "products": [
+          {
+            "id": "greensky-allocator",
+            "title": "GreenSky Allocator",
+            "description": "AI engine that optimizes SAF blend ratios and sourcing routes against cost, supply, and carbon-target constraints.",
+            "suggestedQuestions": [
+              "How does GreenSky Allocator forecast SAF supply availability?",
+              "What carbon accounting standards does it report against?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "SAF supply chain",
+          "Carbon accounting",
+          "Sustainability targets"
+        ],
+        "disallowedTopics": [
+          "Supplier contract terms",
+          "Unapproved pricing"
+        ],
+        "tone": "Thoughtful, scientific, sustainability-focused"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
+    },
+    {
+      "id": "viktor-koval",
+      "name": "Viktor Koval",
+      "role": "Head of MRO Digital Twin",
+      "company": "AeroMaint Systems",
+      "avatar": "https://images.unsplash.com/photo-1521341957697-b93449760f30?w=150&auto=format&fit=crop&q=80",
+      "venueId": "sin-t3",
+      "zone": "Central Transit Garden",
+      "availabilityMinutes": 65,
+      "availableUntil": "2026-10-14T03:30:00.000Z",
+      "objective": "sell_products",
+      "rawDescription": "Predictive maintenance digital twins for aircraft systems, correlating live sensor telemetry with failure-risk models to cut unscheduled maintenance events.",
+      "contactInfo": {
+        "email": "viktor.koval@aeromaint.systems",
+        "linkedin": "linkedin.com/in/viktor-koval-mro"
+      },
+      "agentSpec": {
+        "oneLinePitch": "Predictive maintenance digital twins that turn live aircraft telemetry into failure-risk forecasts.",
+        "elevatorPitch": "I'm Viktor Koval's agent at AeroMaint Systems. We build digital twins of aircraft systems that ingest live sensor telemetry to predict failures before they ground a plane.",
+        "products": [
+          {
+            "id": "aeromaint-twin",
+            "title": "AeroMaint Twin",
+            "description": "Predictive maintenance digital twin correlating cabin and systems telemetry with failure-risk forecasting models.",
+            "suggestedQuestions": [
+              "Could AeroMaint Twin ingest DAViX cabin telemetry streams directly?",
+              "What lead time do your failure predictions typically give maintenance crews?"
+            ]
+          }
+        ],
+        "approvedTopics": [
+          "Predictive maintenance",
+          "Telemetry integration",
+          "MRO digital twins"
+        ],
+        "disallowedTopics": [
+          "Fleet-specific failure data",
+          "Unapproved pricing"
+        ],
+        "tone": "Technical, systems-engineering mindset, collaborative"
+      },
+      "permissions": {
+        "autoAnswerProducts": true,
+        "requireApprovalForMeetings": true,
+        "shareContactAfterApproval": true,
+        "showPresence": true
+      }
     }
   ],
   "venues": [
@@ -671,7 +911,7 @@
         "Jewel Connector Plaza",
         "Crystal Garden Concourse"
       ],
-      "activeAttendeesCount": 13
+      "activeAttendeesCount": 18
     },
     {
       "id": "sfo-t2",
