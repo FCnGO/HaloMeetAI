@@ -47,6 +47,19 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
   const [brief, setBrief] = useState(currentPersona.rawDescription);
   const [isGenerating, setIsGenerating] = useState(false);
   const [generateError, setGenerateError] = useState<string | null>(null);
+  const [pendingProfile, setPendingProfile] = useState<UserProfile | null>(null);
+  const [lookingFor, setLookingFor] = useState<string[]>([]);
+  const [isActivating, setIsActivating] = useState(false);
+
+  const deriveLookingFor = (objective: UserProfile['objective']): string[] => {
+    switch (objective) {
+      case 'find_partners': return ['Partnership leads'];
+      case 'invest': return ['Investment opportunities'];
+      case 'sell_products': return ['Buyers & customers'];
+      case 'network': return ['New connections'];
+      default: return ['Relevant contacts'];
+    }
+  };
 
   const handlePhotoSelected = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -124,15 +137,37 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
           }))
         }
       };
-      onProfileUpdated(updated);
-      await api.saveProfile(updated);
-      onComplete();
+      setPendingProfile(updated);
+      setLookingFor(deriveLookingFor(currentPersona.objective));
     } catch (err: any) {
       console.error('Failed to generate agent:', err);
       setGenerateError(err?.message || 'Failed to generate your avatar with Gemini. Please retry.');
     } finally {
       setIsGenerating(false);
     }
+  };
+
+  const handleActivate = async () => {
+    if (!pendingProfile) return;
+    setIsActivating(true);
+    try {
+      onProfileUpdated(pendingProfile);
+      await api.saveProfile(pendingProfile);
+      onComplete();
+    } catch (err: any) {
+      console.error('Failed to activate avatar:', err);
+      setGenerateError(err?.message || 'Failed to activate your avatar. Please retry.');
+    } finally {
+      setIsActivating(false);
+    }
+  };
+
+  const handleRemoveLookingFor = (tag: string) => {
+    setLookingFor(prev => prev.filter(t => t !== tag));
+  };
+
+  const updatePendingPitch = (value: string) => {
+    setPendingProfile(prev => prev ? { ...prev, agentSpec: { ...prev.agentSpec, oneLinePitch: value } } : prev);
   };
 
   const stepTitles = ['About you', 'Your products', 'Brief your avatar'];
@@ -372,6 +407,42 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                 </button>
               </div>
             </div>
+
+            {pendingProfile && (
+              <div className="bg-white rounded-2xl border border-[#D8D8D3] p-4 space-y-3.5">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold text-[#8E9097] uppercase tracking-wider">Avatar specification</span>
+                  <span className="text-[11px] font-medium text-[#5558E8]">Tap any field to edit</span>
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-medium text-[#5A5C63]">Pitch</label>
+                  <textarea
+                    value={pendingProfile.agentSpec.oneLinePitch}
+                    onChange={(e) => updatePendingPitch(e.target.value)}
+                    rows={3}
+                    className="w-full text-sm text-[#16171A] bg-[#F6F6F3] rounded-xl p-2.5 outline-none resize-none leading-relaxed border border-[#E2E2DC] focus:border-[#5558E8]"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <label className="text-[11px] font-medium text-[#5A5C63]">Looking for</label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {lookingFor.map((tag) => (
+                      <span
+                        key={tag}
+                        className="inline-flex items-center gap-1 text-xs font-medium px-2.5 py-1 rounded-full bg-[#EEF0FD] text-[#5558E8]"
+                      >
+                        {tag}
+                        <button type="button" onClick={() => handleRemoveLookingFor(tag)} className="cursor-pointer">
+                          <X className="w-3 h-3" />
+                        </button>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -383,6 +454,25 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
             className="btn-primary-pill w-full h-13 text-base shadow-sm mt-6 shrink-0"
           >
             Continue
+          </button>
+        )}
+
+        {/* Activate button once the avatar has been generated */}
+        {step === 3 && pendingProfile && (
+          <button
+            type="button"
+            onClick={handleActivate}
+            disabled={isActivating}
+            className="btn-primary-pill w-full h-13 text-base shadow-sm mt-6 shrink-0 disabled:opacity-60"
+          >
+            {isActivating ? (
+              <>
+                <Sparkles className="w-4 h-4 animate-spin" />
+                Activating...
+              </>
+            ) : (
+              'Activate my avatar'
+            )}
           </button>
         )}
       </div>
