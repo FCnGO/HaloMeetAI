@@ -190,7 +190,7 @@ Generate a clean JSON object with:
     
     // Attempt 2: gemini-3.1-flash-lite (high availability, sub-second)
     try {
-      const aiLite = getAIClientWithTelemetry(telemetry, 7000);
+      const aiLite = getAIClientWithTelemetry(telemetry, 11000);
       const response = await aiLite.models.generateContent({
         model: 'gemini-3.1-flash-lite',
         contents: prompt,
@@ -329,7 +329,7 @@ ${JSON.stringify(candidateData, null, 2)}`;
     
     // Attempt 2: gemini-3.1-flash-lite
     try {
-      const aiLite = getAIClientWithTelemetry(telemetry, 7000);
+      const aiLite = getAIClientWithTelemetry(telemetry, 11000);
       const response = await aiLite.models.generateContent({
         model: 'gemini-3.1-flash-lite',
         contents: prompt,
@@ -567,7 +567,7 @@ MULTILINGUAL ADAPTATION (CRITICAL):
     
     // Attempt 2: gemini-3.1-flash-lite
     try {
-      const aiLite = getAIClientWithTelemetry(telemetry, 7000);
+      const aiLite = getAIClientWithTelemetry(telemetry, 11000);
       const response = await aiLite.models.generateContent({
         model: 'gemini-3.1-flash-lite',
         contents: chatContents,
@@ -747,9 +747,9 @@ Return structured JSON.`;
   let parsed: any = null;
   let modelUsed = 'gemini-3.8-flash';
 
-  // Attempt 1: gemini-3.8-flash (fail-fast 6.5s)
+  // Attempt 1: gemini-3.8-flash (budget raised to cover scoring the full venue in one call)
   try {
-    const ai = getAIClientWithTelemetry(telemetry, 12000);
+    const ai = getAIClientWithTelemetry(telemetry, 18000);
     const response = await ai.models.generateContent({
       model: 'gemini-3.8-flash',
       contents: prompt,
@@ -761,7 +761,7 @@ Return structured JSON.`;
     
     // Attempt 2: gemini-3.1-flash-lite
     try {
-      const aiLite = getAIClientWithTelemetry(telemetry, 7000);
+      const aiLite = getAIClientWithTelemetry(telemetry, 11000);
       const response = await aiLite.models.generateContent({
         model: 'gemini-3.1-flash-lite',
         contents: prompt,
